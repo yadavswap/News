@@ -19,11 +19,11 @@ Route::get('/', function () {
     return view('frontend.index');
 })->name('home');
 
-Route::get('/category', function () {
+Route::get('category', function () {
     return view('frontend.category');
 })->name('category');
 
-Route::get('/article', function () {
+Route::get('article', function () {
     return view('frontend.article');
 })->name('article');
 
