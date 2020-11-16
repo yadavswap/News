@@ -46,3 +46,4 @@ Route::get('add-post', 'adminController@addpost')->name('add-post');
 
 Route::post('addcategory','crudController@insertdata')->name('addcategory');
 Route::post('updatecategory/{id}','crudController@updatedata')->name('updatecategory');
+Route::post('multipledelete','adminController@multipledelete')->name('multipledelete');

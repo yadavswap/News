@@ -50,11 +50,18 @@
 		</div>
 
 		<div class="col-sm-8 cat-view">
+			<form  method="post" action="{{url('multipledelete')}}">
+
+				
 			<div class="row">
+
+				{{ csrf_field() }}
+				<input type="hidden" name="tbl" value="{{encrypt('categories')}}">
+				<input type="hidden" name="tblid" value="{{encrypt('cid')}}">
 				<div class="col-sm-3">
 					<select name="bulk-action" class="form-control">
-						<option>Bulk Action</option>
-						<option>Move to Trash</option>
+						<option value="0">Bulk Action</option>
+						<option value="1">Move to Trash</option>
 					</select>
 				</div>
 				<div class="col-sm-2">
@@ -80,8 +87,8 @@
 							
 						<tr>
 							<td>
-								<input type="checkbox" name="select-cat"> 
-							<a href="{{url('editcategory')}}/{{$cat->cid}}">{{$cat->title}}</a>
+							<input type="checkbox" name="select-data[]" value="{{$cat->cid}}"> 
+							<a href="#">{{$cat->title}}</a>
 							</td>
 					
 							<td>{{$cat->slug}}</td>
