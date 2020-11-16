@@ -15,44 +15,34 @@
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('frontend.index');
-})->name('home');
+Route::get('/', 'frontendController@index')->name('index');
 
-Route::get('category', function () {
-    return view('frontend.category');
-})->name('category');
+Route::get('category', 'frontendController@category')->name('category');
 
-Route::get('article', function () {
-    return view('frontend.article');
-})->name('article');
+Route::get('article', 'frontendController@article')->name('article');
 
 
 
 // backend routes
 
 
-Route::get('admin', function () {
-    return view('backend.adminindex');
-})->name('adminindex');
+Route::get('admin', 'adminController@adminindex')->name('adminindex');
 
-Route::get('category', function () {
-    return view('backend.category');
-})->name('category');
+Route::get('viewcategory', 'adminController@category')->name('category');
 
-Route::get('view-table', function () {
-    return view('backend.view-table');
-})->name('view-table');
+Route::get('editcategory/{id}', 'adminController@editcategory')->name('editcategory');
+
+Route::get('view-table', 'adminController@viewtable')->name('view-table');
 
 
-Route::get('menu', function () {
-    return view('backend.menu');
-})->name('menu');
+Route::get('menu', 'adminController@menu')->name('menu');
 
-Route::get('login', function () {
-    return view('backend.login');
-})->name('login');
+Route::get('login', 'adminController@login')->name('login');
 
-Route::get('add-post', function () {
-    return view('backend.add-post');
-})->name('add-post');
+Route::get('add-post', 'adminController@addpost')->name('add-post');
+
+
+// crud controller
+
+Route::post('addcategory','crudController@insertdata')->name('addcategory');
+Route::post('updatecategory/{id}','crudController@updatedata')->name('updatecategory');

@@ -1,0 +1,17 @@
+1) Set up laravel project
+2) Blade template
+3) setup views and routes 
+4) Database setup
+5) create model category nd migration
+6) create table nd columns and then migration
+7) make controller frontendController
+8) make controller adminController
+9) rewrite routes as per controller
+10) setup category blade file as per requirement
+11)use DB and query in controller 
+12) show data in frontend
+13) create crud controller to manage all crud operation
+14) insert operation with controller and frontend
+15) update operation with controller and data update in admin panel show
+
+
