@@ -68,16 +68,15 @@
             </a>            
         </li>
         <li class="treeview">
-            <a href="#">
-              <i class="fa fa-bar-chart"></i> <span>Reports</span>
+        <a href="{{url('settings')}}">
+              <i class="fa fa-gear"></i> <span>Settings</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
-            <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-eye"></i>All Reports</a></li>
-              <li><a href="#"><i class="fa fa-plus-circle"></i>Add Reports</a></li>
-            </ul>
+            {{--  <ul class="treeview-menu">
+              <li><a href="{{url('viewcategory')}}"><i class="fa fa-eye"></i>All Reports</a></li>
+            </ul>  --}}
         </li>
         <li class="treeview">
             <a href="#">

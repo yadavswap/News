@@ -3,7 +3,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>COLORMAG - NEWS SITE</title>
+<title>{{config('name','NEWSKATTA')}}</title>
 <link href="{{url('/css/bootstrap.min.css')}}" rel="stylesheet"  />
 <link href="{{url('/css/bootstrap-theme.min.css')}}" rel="stylesheet"  />
 <link href="{{url('/style.css')}}" rel="stylesheet"  />
@@ -34,7 +34,7 @@
 
 <div class="col-md-12 brand">
 	<div class="col-md-4 name">
-    	<font color="#555555">COLOR</font><font color="#2ca0c9">MAG</font>
+    	<font color="#555555">NEWS</font><font color="#2ca0c9">KATTA</font>
     </div>
     <div class="col-md-8">
     	<img src="images/final-news-site_06.gif" width="100%" />
@@ -51,7 +51,7 @@
             		<span class="icon-bar"></span>
             		<span class="icon-bar"></span>
         		</button>
-        		<span class="navbar-brand"><font color="#555555">COLOR</font><font color="#2ca0c9">MAG</font></span>
+        		<span class="navbar-brand"><font color="#555555">NEWS</font><font color="#2ca0c9">KATTA</font></span>
     		</div>
     		<div class="collapse navbar-collapse" id="mynavbar">
     			<ul class="nav nav-justified">
@@ -76,7 +76,7 @@
 <div class="col-md-12 bottom">
     <div class="col-md-4">
         <h3 style="border-bottom:2px solid #ccc;"><span style="border-bottom:2px solid #f00;">About Us</span></h3>
-        <img src="images/book.png" align="left" /><span class="name"><font color="#e03521">COLOR</font><font color="#fff">MAG</font></span>
+        <img src="images/book.png" align="left" /><span class="name"><font color="#e03521">NEWS</font><font color="#fff">KATTA</font></span>
         <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
     <div class="col-md-4">
@@ -106,7 +106,7 @@
     </div>
     <div class="col-md-4">
         <h3 style="border-bottom:2px solid #ccc;"><span style="border-bottom:2px solid #f00;">Contact Us</span></h3>
-        <span class="name"><font color="#e03521">COLOR</font><font color="#fff">MAG</font></span><br />
+        <span class="name"><font color="#e03521">NEWS</font><font color="#fff">KATTA</font></span><br />
         Follow us at:<br /><br />
         <a href="#"><img src="images/icon-fb.png" /></a>
         <a href="#"><img src="images/icon-twitter.png" /></a>

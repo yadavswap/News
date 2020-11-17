@@ -51,8 +51,9 @@ use Session;class adminController extends Controller
         return view ('backend.viewtable');
     }
 
-    public function menu(){
-        return view ('backend.menu');
+    public function settings(){
+        $data = DB::table('settings')->first();
+        return view ('backend.settings',['data'=>$data]);
     }
 
     public function addpost(){
