@@ -16,7 +16,7 @@
 <div class="col-md-12 top" id="top">
 	<div class="col-md-9 top-left">
     	<div class="col-md-3">
-    		<span class="day">Saturday, December 24, 2016</span> 
+        <span class="day">{{date('l,m,d,y')}}</span> 
         </div>
         <div class="col-md-9">
         	<span class="latest">Latest: </span> <a href="#">Wireless Headphones are now on Market</a>
@@ -55,15 +55,13 @@
     		</div>
     		<div class="collapse navbar-collapse" id="mynavbar">
     			<ul class="nav nav-justified">
-    				<li><a href="#" class="active"><span class="glyphicon glyphicon-home"></span></a></li>
-    				<li><a href="#">POLITICS</a></li>
-    				<li><a href="#">BUSINESS</a></li>
-    				<li><a href="#">ENTERTAINMENT</a></li>
-    				<li><a href="#">TECHNOLOGY</a></li>
-    				<li><a href="#">SPORTS</a></li>
-    				<li><a href="#">TRAVEL</a></li>
-    				<li><a href="#">STYLE</a></li>
-    				<li><a href="#">HEALTH</a></li>
+                    <li><a href="{{url('/')}}" class="active"><span class="glyphicon glyphicon-home"></span></a></li>
+                    @foreach($categories as $cat)
+                        
+                <li><a href="{{url("category")}}/{{$cat->slug}}" class="text-uppercase">{{$cat->title}}</a></li>
+                    @endforeach
+
+    				
         		</ul> 
 			</div>
 		</nav>
@@ -121,7 +119,7 @@
 </div>
 
 <div class="col-md-12 text-center copyright">
-Copyright &copy; 2016 <a href="#">COLORMAG</a> Powered by: <a href="#">DREAMTEAM</a>
+Copyright &copy; {{date('Y')}}  <a href="#">NEWSKATTA</a> Powered by: <a href="prowiggle.com">ProWiggle Data Solutions Pvt. Ltd.</a>
 </div>
 
 </body>

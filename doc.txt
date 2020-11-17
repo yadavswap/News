@@ -13,5 +13,7 @@
 13) create crud controller to manage all crud operation
 14) insert operation with controller and frontend
 15) update operation with controller and data update in admin panel show
+16) delete and bulk delete operation
+17) show added category in frontend
 
 
