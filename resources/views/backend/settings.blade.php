@@ -18,7 +18,7 @@
 			</div>
 			@endif
 			<h3>Add New Settings</h3>
-		<form method="post" action="{{url('addsettings')}}">
+		<form method="post" action="{{url('addsettings')}}" enctype="multipart/form-data">
 			{{ csrf_field()}}
 		<input type="hidden" name="tbl" value="{{encrypt('settings')}}">
 				<div class="form-group">
@@ -29,12 +29,24 @@
 					<label>About Us</label>
 					<textarea name="about" class="form-control"  rows="10"></textarea>
 				</div>
-
-				<div class="form-group">
+				<div id="socialFieldGroup">
+				<div class="form-grou p">
 					<label>Social</label>
-					<input type="url" name="url" class="form-control" >
+					<input type="url" name="url[]" class="form-control" >
+					<p class="text-muted">eg.www.prowiggle.com</p>
+				</div>
 				</div>
 
+
+				<div class="text-right form-group">
+					<span class="btn btn-warning" id="addSocialField"><i class="fa fa-plus"></i></span>
+				</div>
+				<div class="form-group">
+					<div class="alert alert-danger alert-dismissable noshow" id="socialAlert">
+						<a href="#" class="close" data-dismiss="alert">&times;</a>
+						<strong>Sorry ! </strong>You have reacched the social fields limt.
+					</div>
+				</div>
 			
 		
 				<div class="form-group">
@@ -49,4 +61,24 @@
 		</div>
 	</div>
 </div>
+<style>
+	.noshow{display:none};
+</style>
+
+
+<script>
+	var socialCounter = 1;
+
+	 $('#addSocialField').click(function(){
+		 socialCounter++;
+		 if(socialCounter > 5){
+			 $('socialAlert').removeClass('noshow');
+			 return;
+		 }
+		
+		 newDiv = $(document.createElement('div')).attr("class","form-group");
+		 newDiv.after().html('<input type="url" name="url[]" class="form-control" ></div>');
+		 newDiv.appendTo("#socialFieldGroup");
+	 })
+	</script>
 @endsection
