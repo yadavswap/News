@@ -18,41 +18,91 @@
 			</div>
 			@endif
 			<h3>Add New Settings</h3>
-		<form method="post" action="{{url('addsettings')}}" enctype="multipart/form-data">
-			{{ csrf_field()}}
-		<input type="hidden" name="tbl" value="{{encrypt('settings')}}">
-				<div class="form-group">
-					<label>Logo</label>
-					<input type="file" name="image" class="form-control">
-                </div>
-                <div class="form-group">
-					<label>About Us</label>
-					<textarea name="about" class="form-control"  rows="10"></textarea>
-				</div>
-				<div id="socialFieldGroup">
-				<div class="form-grou p">
-					<label>Social</label>
-					<input type="url" name="url[]" class="form-control" >
-					<p class="text-muted">eg.www.prowiggle.com</p>
-				</div>
-				</div>
-
-
-				<div class="text-right form-group">
-					<span class="btn btn-warning" id="addSocialField"><i class="fa fa-plus"></i></span>
-				</div>
-				<div class="form-group">
-					<div class="alert alert-danger alert-dismissable noshow" id="socialAlert">
-						<a href="#" class="close" data-dismiss="alert">&times;</a>
-						<strong>Sorry ! </strong>You have reacched the social fields limt.
-					</div>
-				</div>
+		@if(count($data) < 1)
 			
-		
-				<div class="form-group">
-					<button class="btn btn-primary">Add Settings</button>
-				</div>
-			</form>	
+			<form method="post" action="{{url('addsettings')}}" enctype="multipart/form-data">
+				{{ csrf_field()}}
+			<input type="hidden" name="tbl" value="{{encrypt('settings')}}">
+					<div class="form-group">
+						<label>Logo</label>
+						<input type="file" name="image" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>About Us</label>
+						<textarea name="about" class="form-control"  rows="10"></textarea>
+					</div>
+					<div id="socialFieldGroup">
+					<div class="form-grou p">
+						<label>Social</label>
+						<input type="url" name="social[]" class="form-control" >
+						<p class="text-muted">eg.www.prowiggle.com</p>
+					</div>
+					</div>
+
+
+					<div class="text-right form-group">
+						<span class="btn btn-warning" id="addSocialField"><i class="fa fa-plus"></i></span>
+					</div>
+					<div class="form-group">
+						<div class="alert alert-danger alert-dismissable noshow" id="socialAlert">
+							<a href="#" class="close" data-dismiss="alert">&times;</a>
+							<strong>Sorry ! </strong>You have reacched the social fields limt.
+						</div>
+					</div>
+				
+			
+					<div class="form-group">
+						<button class="btn btn-primary">Add Settings</button>
+					</div>
+				</form>	
+			@else
+				<form method="post" action="{{url('updatesettings')}}/{{$data->sid}}" enctype="multipart/form-data">
+						{{ csrf_field()}}
+					<input type="hidden" name="tbl" value="{{encrypt('settings')}}">
+					<input type="hidden" name="tbl" value="{{encrypt('$data->sid')}}">
+
+							<div class="form-group">
+								<label>Logo</label>
+								@if(!empty($data->image))
+							<input type="file" src="{{url('public/settings')}}/{{$data->image}}" >
+
+								@else
+								<input type="file" name="image" class="form-control">
+								@endif
+
+							</div>
+							<div class="form-group">
+								<label>About Us</label>
+								
+								<textarea name="about" class="form-control"  rows="10">
+									{{$data->about}}
+								</textarea>
+							</div>
+							<div id="socialFieldGroup">
+							<div class="form-grou p">
+								<label>Social</label>
+								<input type="url" name="social[]" class="form-control" >
+								<p class="text-muted">eg.www.prowiggle.com</p>
+							</div>
+							</div>
+			
+			
+							<div class="text-right form-group">
+								<span class="btn btn-warning" id="addSocialField"><i class="fa fa-plus"></i></span>
+							</div>
+							<div class="form-group">
+								<div class="alert alert-danger alert-dismissable noshow" id="socialAlert">
+									<a href="#" class="close" data-dismiss="alert">&times;</a>
+									<strong>Sorry ! </strong>You have reacched the social fields limt.
+								</div>
+							</div>
+						
+					
+							<div class="form-group">
+								<button class="btn btn-primary">Update Settings</button>
+							</div>
+						</form>	
+				@endif
 
 
 		</div>
@@ -77,7 +127,7 @@
 		 }
 		
 		 newDiv = $(document.createElement('div')).attr("class","form-group");
-		 newDiv.after().html('<input type="url" name="url[]" class="form-control" ></div>');
+		 newDiv.after().html('<input type="social" name="social[]" class="form-control" ></div>');
 		 newDiv.appendTo("#socialFieldGroup");
 	 })
 	</script>

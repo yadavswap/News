@@ -29,7 +29,7 @@ Route::get('article', 'frontendController@article')->name('article');
 Route::get('admin', 'adminController@adminindex')->name('adminindex');
 
 Route::get('viewcategory', 'adminController@category')->name('category');
-Route::get('settings', 'adminController@settings')->name('settings');
+Route::get('set', 'adminController@settings')->name('settings');
 
 
 Route::get('editcategory/{id}', 'adminController@editcategory')->name('editcategory');
@@ -49,3 +49,4 @@ Route::get('add-post', 'adminController@addpost')->name('add-post');
 Route::post('addcategory','crudController@insertdata')->name('addcategory');
 Route::post('updatecategory/{id}','crudController@updatedata')->name('updatecategory');
 Route::post('multipledelete','adminController@multipledelete')->name('multipledelete');
+Route::post('addsettings','crudController@insertdata')->name('addsettings');
