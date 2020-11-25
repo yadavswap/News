@@ -23,18 +23,18 @@
         </div>
     </div>
     <div class="col-md-3">
-    	<a href="#"><img src="{{url('/images/icon-fb.png')}}" /></a>
-    	<a href="#"><img src="{{url('/images/icon-twitter.png')}}" /></a>
-    	<a href="#"><img src="{{url('/images/icon-google.png')}}" /></a>
-    	<a href="#"><img src="{{url('/images/icon-insta.png')}}" /></a>
-    	<a href="#"><img src="{{url('/images/icon-pin.png')}}" /></a>
-    	<a href="#"><img src="{{url('/images/icon-youtube.png')}}" /></a>
+        {{--  @foreach($setting->social as $key->$social)
+        <a href="{{$social}}"><i class="fa fa-{{$icons}}"></i></a>
+
+         @endforeach      --}}
     </div>
 </div>
 
 <div class="col-md-12 brand">
 	<div class="col-md-4 name">
-    	<font color="#555555">NEWS</font><font color="#2ca0c9">KATTA</font>
+    @if($setting->image)
+    <img src="{{url('/settings')}}/{{$setting->image}}" width="50%"/>
+    @endif
     </div>
     <div class="col-md-8">
     	<img src="images/final-news-site_06.gif" width="100%" />
@@ -74,11 +74,19 @@
 @yield('content')
 {{-- footer --}}
 <div class="col-md-12 bottom">
+
     <div class="col-md-4">
+            
         <h3 style="border-bottom:2px solid #ccc;"><span style="border-bottom:2px solid #f00;">About Us</span></h3>
-        <img src="images/book.png" align="left" /><span class="name"><font color="#e03521">NEWS</font><font color="#fff">KATTA</font></span>
-        <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        @if($setting->image)
+        <img src="{{url('/settings')}}/{{$setting->image}}" width="50%"/><br/>
+        @endif
+        <br />
+            <p align="justify">{{$setting->about}}</p>
+
     </div>
+    
+
     <div class="col-md-4">
         <div class="col-md-12">
             <h3 style="border-bottom:2px solid #ccc;"><span style="border-bottom:2px solid #f00;">Quick Links</span></h3>
@@ -86,35 +94,36 @@
         <div class="col-md-6">
             <div class="row">
               <ul class="nav">
-                <li><a href="#">POLITICS</a></li>
-                <li><a href="#">BUSINESS</a></li>
-                <li><a href="#">ENTERTAINMENT</a></li>
-                <li><a href="#">TECHNOLOGY</a></li>
+                @foreach($categories as $cat)
+                <li><a href="{{url('category')}}/{{$cat->slug}}"  class="text-uppercase">{{$cat->title}}</a>
+                </li>
+               @endforeach
             </ul> 
             </div>
         </div>
         <div class="col-md-6">
             <div class="row">
               <ul class="nav">
-                <li><a href="#">SPORTS</a></li>
+                {{--  <li><a href="#">SPORTS</a></li>
                 <li><a href="#">TRAVEL</a></li>
                 <li><a href="#">STYLE</a></li>
-                <li><a href="#">HEALTH</a></li>
+                <li><a href="#">HEALTH</a></li>  --}}
             </ul> 
             </div>
         </div>    
     </div>
     <div class="col-md-4">
         <h3 style="border-bottom:2px solid #ccc;"><span style="border-bottom:2px solid #f00;">Contact Us</span></h3>
-        <span class="name"><font color="#e03521">NEWS</font><font color="#fff">KATTA</font></span><br />
-        Follow us at:<br /><br />
-        <a href="#"><img src="images/icon-fb.png" /></a>
-        <a href="#"><img src="images/icon-twitter.png" /></a>
-        <a href="#"><img src="images/icon-google.png" /></a>
-        <a href="#"><img src="images/icon-insta.png" /></a>
-        <a href="#"><img src="images/icon-pin.png" /></a>
-        <a href="#"><img src="images/icon-youtube.png" /></a><br />
-        <a href="#top" class=" goto"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        @if($setting->image)
+        <img src="{{url('/settings')}}/{{$setting->image}}" width="50%"/>
+        @endif     
+        <br /><br />  
+         Follow us at:<br /><br />
+         {{--  @foreach($setting->social as $social)
+        <a href="{{$social}}"><i class="fa fa-">{{$social}}</a>
+
+         @endforeach  --}}
+       
     </div>
 </div>
 

@@ -27,6 +27,10 @@ $(document).ready(function(){
 		var slug = $(this).val();
 		$('#slug').val(slugify(slug));
 	});
+	$('#post_title').keyup(function(){
+		var slug = $(this).val();
+		$('#slug').val(slugify(slug));
+	});
 
 	$('#select-all').click(function(event) {   
 	    if(this.checked) {

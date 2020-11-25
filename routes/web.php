@@ -41,7 +41,6 @@ Route::get('menu', 'adminController@menu')->name('menu');
 
 Route::get('login', 'adminController@login')->name('login');
 
-Route::get('add-post', 'adminController@addpost')->name('add-post');
 
 
 // crud controller
@@ -50,3 +49,8 @@ Route::post('addcategory','crudController@insertdata')->name('addcategory');
 Route::post('updatecategory/{id}','crudController@updatedata')->name('updatecategory');
 Route::post('multipledelete','adminController@multipledelete')->name('multipledelete');
 Route::post('addsettings','crudController@insertdata')->name('addsettings');
+// post
+
+
+Route::get('addpost', 'adminController@addpost')->name('addpost');
+Route::post('addpost', 'crudController@insertdata')->name('addpost');

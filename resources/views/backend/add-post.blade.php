@@ -10,10 +10,15 @@
 
 		<div class="col-sm-12">
 			<div class="row">
-				<form method="post">
+			<form method="post" action="{{url(addpost)}}" enctype="multipart/form-data">
+				{{ csrf_field ()}}
+			<input type="hidden" name="tbl" value="{{encrypt('posts')}}"/>
 					<div class="col-sm-9">
 						<div class="form-group">	
-							<input type="text" name="title" class="form-control" placeholder="Enter title here">				
+							<input type="text" name="title" class="form-control" placeholder="Enter title here" id="post_title">				
+						</div>	
+						<div class="form-group">	
+							<input type="text" name="title" class="form-control" placeholder="Enter slug here" id="slug">				
 						</div>						
 						<div class="form-group">		
 							<textarea class="form-control" name="description" rows="15"></textarea>
@@ -24,26 +29,26 @@
 						<div class="content publish-box">
 							<h4>Publish  <span class="pull-right"><i class="fa fa-chevron-down"></i></span></h4><hr>	
 							<div class="form-group">
-								<button class="btn btn-default">Save Draft</button>
+								<button class="btn btn-default" value="draft">Save Draft</button>
 							</div>
 							<p>Status: Draft <a href="#">Edit</a></p>
 							<p>Visibility: Public <a href="#">Edit</a></p>
 							<p>Publish: Immediately <a href="#">Edit</a></p>
 							<div class="row">
 								<div class="col-sm-12 main-button">
-									<button class="btn btn-primary pull-right">Publish</button>
+									<button class="btn btn-primary pull-right" value="publish">Publish</button>
 								</div>
 							</div>	
 						</div>
 						
 						<div class="content cat-content">
 							<h4>Category  <span class="pull-right"><i class="fa fa-chevron-down"></i></span></h4><hr>	
-							<p><label for="cat1"><input type="checkbox" name="category" id="cat1" checked=""> Category 1</label></p>
-							<p><label for="cat2"><input type="checkbox" name="category" id="cat2"> Category 2</label></p>
-							<p><label for="cat3"><input type="checkbox" name="category" id="cat3"> Category 3</label></p>
-							<p><label for="cat4"><input type="checkbox" name="category" id="cat4"> Category 4</label></p>
-							<p><label for="cat5"><input type="checkbox" name="category" id="cat5"> Category 5</label></p>
-							<p><label for="cat6"><input type="checkbox" name="category" id="cat6"> Category 6</label></p>
+							@foreach($categories as $cat)
+								
+						<p><label for="{{$cat->cid}}"><input type="checkbox" name="category_id[]" value="{{$cat->cid}}"> {{$cat->title}}</label></p>
+							@endforeach
+
+		
 						</div>
 						<div class="content featured-image">
 							<h4>Featured Image <span class="pull-right"><i class="fa fa-chevron-down"></i></span></h4><hr>	
@@ -58,14 +63,7 @@
 </div>
 
 
-<footer>
-	<div class="col-sm-6">
-		Copyright &copy; 2018 <a href="http://www.webtrickshome.com">Webtrickshome.com</a> All rights reserved. 
-	</div>
-	<div class="col-sm-6">
-		<span class="pull-right">Version 2.2.3</span>
-	</div>
-</footer>
+
 
 <script  src="{{url('js/jquery.min.js')}}"></script>
 <script  src="{{url('js/bootstrap.min.js')}}"></script>
@@ -77,8 +75,8 @@
 		})
 	});
 </script>
-<script src="ckeditor/ckeditor.js"></script>
+<script src="{{url('ckeditor/ckeditor/ckeditor.js')}}"></script>
 <script>
-	CKEDITOR.replace('description', { "filebrowserBrowseUrl": "..\/editor\/ckfinder\/ckfinder.html", "filebrowserImageBrowseUrl": "..\/editor\/ckfinder\/ckfinder.html?type=Images", "filebrowserFlashBrowseUrl": "..\/editor\/ckfinder\/ckfinder.html?type=Flash", "filebrowserUploadUrl": "..\/editor\/ckfinder\/core\/connector\/php\/connector.php?command=QuickUpload&type=Files", "filebrowserImageUploadUrl": "..\/editor\/ckfinder\/core\/connector\/php\/connector.php?command=QuickUpload&type=Images", "filebrowserFlashUploadUrl": "..\/editor\/ckfinder\/core\/connector\/php\/connector.php?command=QuickUpload&type=Flash" });	
+	CKEDITOR.replace('description', { "filebrowserBrowseUrl": "ckfinder\/ckfinder.html", "filebrowserImageBrowseUrl": "ckfinder\/ckfinder.html?type=Images", "filebrowserFlashBrowseUrl": "ckfinder\/ckfinder.html?type=Flash", "filebrowserUploadUrl": "ckfinder\/core\/connector\/php\/connector.php?command=QuickUpload&type=Files", "filebrowserImageUploadUrl": "ckfinder\/core\/connector\/php\/connector.php?command=QuickUpload&type=Images", "filebrowserFlashUploadUrl": "ckfinder\/core\/connector\/php\/connector.php?command=QuickUpload&type=Flash" });	
 </script>
 @endsection

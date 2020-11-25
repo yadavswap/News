@@ -18,7 +18,7 @@
 			</div>
 			@endif
 			<h3>Add New Settings</h3>
-		@if(count($data) < 1)
+			{{-- @if(count($data) > 0) --}}
 			
 			<form method="post" action="{{url('addsettings')}}" enctype="multipart/form-data">
 				{{ csrf_field()}}
@@ -55,8 +55,8 @@
 						<button class="btn btn-primary">Add Settings</button>
 					</div>
 				</form>	
-			@else
-				<form method="post" action="{{url('updatesettings')}}/{{$data->sid}}" enctype="multipart/form-data">
+			{{-- @else --}}
+				{{-- <form method="post" action="{{url('updatesettings')}}/{{$data->sid}}" enctype="multipart/form-data">
 						{{ csrf_field()}}
 					<input type="hidden" name="tbl" value="{{encrypt('settings')}}">
 					<input type="hidden" name="tbl" value="{{encrypt('$data->sid')}}">
@@ -102,7 +102,7 @@
 								<button class="btn btn-primary">Update Settings</button>
 							</div>
 						</form>	
-				@endif
+				@endif --}}
 
 
 		</div>

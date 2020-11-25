@@ -56,8 +56,11 @@ use Session;class adminController extends Controller
         if($data){
             $data->social = explode(',',$data->social);
         }
+        // print_r($data);
+        // exit();
 
         return view ('backend.settings',['data'=>$data]);
+     
         // echo count($data);
         // exit();
     }
@@ -65,6 +68,8 @@ use Session;class adminController extends Controller
   
 
     public function addpost(){
-        return view ('backend.addpost');
+        $categories = DB::table('categories')->get();
+
+        return view ('backend.add-post',['categories'=>$categories]);
     }
 }

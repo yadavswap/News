@@ -29,7 +29,7 @@
             </a>
             <ul class="treeview-menu">
               <li><a href="view-table.html"><i class="fa fa-eye"></i>All Posts</a></li>
-              <li><a href="add-post.html"><i class="fa fa-plus-circle"></i>Add Posts</a></li>
+              <li><a href="addpost"><i class="fa fa-plus-circle"></i>Add Posts</a></li>
             <li><a href="{{url('viewcategory')}}"><i class="fa fa-plus-circle"></i>Categories</a></li>
             </ul>
         </li>
@@ -102,6 +102,16 @@
               <li><a href="login.html"><i class="fa fa-power-off"></i>Log Out</a></li>
             </ul>
         </li>		
+
+        <li class="treeview">
+        <a href="{{url('elfinder/elfinder.src.html')}}">
+            <i class="fa fa-address-book"></i> <span>File Manager</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        
+      </li>	
 	</ul>
 </div>
 

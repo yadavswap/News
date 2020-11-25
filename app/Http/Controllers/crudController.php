@@ -24,6 +24,10 @@ class crudController extends Controller
         if(Input::hasFile('image')){
             $data['image'] = $this->uploadimage($tbl,$data['image']);
         }
+
+        if(Input::has('category_id')){
+            $data['$category_id'] = implode(',',$data['category_id'])
+        }
         DB::table($tbl)->insert($data);
         session::flash('message','Data Inserted Successfully');
         return redirect()->back();
