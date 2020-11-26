@@ -7,7 +7,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 title">
-      <h1><i class="fa fa-bars"></i> Add New Posts <button class="btn btn-sm btn-default">Add New</button></h1>
+    <h1><i class="fa fa-bars"></i> Add New Posts <a class="btn btn-sm btn-default" href="{{url('addpost')}}">Add New</a></h1>
     </div>
     <div class="col-sm-12">
 			@if(Session::has('message'))
@@ -21,7 +21,7 @@
     </div>
     <div class="search-div">
       <div class="col-sm-9">
-        All(6) | <a href="#">Published (6)</a>
+        All({{$allpost}}) | <a href="#">Published ({{$published}})</a>
       </div>
 
       <div class="col-sm-3">
@@ -44,14 +44,14 @@
           </select>
         </div>
 
-        <div class="col-sm-1">
+        <div class="col-sm">
           <div class="row">
             <button class="btn btn-default">Apply</button>
           </div>  
         </div>
     
        
-      <div class="col-sm-3">
+      <div class="col-sm-3 ">
           {{ $posts->links() }}
 
       </div>

@@ -88,8 +88,10 @@ use Session;class adminController extends Controller
             $postcategory = [];
 
         }
+        $published = DB::table('posts')->where('status','publish')->count();
+        $allpost = DB::table('posts')->count();
 
-        return view ('backend.posts.allposts',['posts'=>$posts]);
+        return view ('backend.posts.allposts',['posts'=>$posts,'published'=>$published,'allpost'=>$allpost]);
     }
     public function editposts($id){
         $data = DB::table('posts')->where('pid',$id)->first();

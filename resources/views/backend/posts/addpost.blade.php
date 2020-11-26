@@ -62,7 +62,9 @@
 						</div>
 						<div class="content featured-image">
 							<h4>Featured Image <span class="pull-right"><i class="fa fa-chevron-down"></i></span></h4><hr>	
-							<input type="file" name="image" id="file" class="inputfile" style="display: none;">
+							<p><img id="output" style="max-width: 100%" /></p>
+							<p>
+							<input type="file" name="image" id="file" accept="image/" onchange="loadFile(event)" style="display: none;"></p>
 							<p><label for="file" style="cursor: pointer;">Set Featured Image</label></p>							
 						</div>
 					</div>
