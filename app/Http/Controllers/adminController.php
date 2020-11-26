@@ -70,6 +70,12 @@ use Session;class adminController extends Controller
     public function addpost(){
         $categories = DB::table('categories')->get();
 
-        return view ('backend.add-post',['categories'=>$categories]);
+        return view ('backend.posts.addpost',['categories'=>$categories]);
+    }
+
+    public function allposts(){
+        $posts = DB::table('posts')->paginate(1);
+
+        return view ('backend.posts.allposts',['posts'=>$posts]);
     }
 }

@@ -28,8 +28,8 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="view-table.html"><i class="fa fa-eye"></i>All Posts</a></li>
-              <li><a href="addpost"><i class="fa fa-plus-circle"></i>Add Posts</a></li>
+            <li><a href="{{url('allposts')}}"><i class="fa fa-eye"></i>All Posts</a></li>
+              <li><a href="{{url('addpost')}}"><i class="fa fa-plus-circle"></i>Add Posts</a></li>
             <li><a href="{{url('viewcategory')}}"><i class="fa fa-plus-circle"></i>Categories</a></li>
             </ul>
         </li>

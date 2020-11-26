@@ -52,5 +52,7 @@ Route::post('addsettings','crudController@insertdata')->name('addsettings');
 // post
 
 
-Route::get('addpost', 'adminController@addpost')->name('addpost');
-Route::post('addpost', 'crudController@insertdata')->name('addpost');
+Route::get('addpost', 'adminController@addpost');
+Route::post('addpost', 'crudController@insertdata');
+Route::get('allposts', 'adminController@allposts');
+

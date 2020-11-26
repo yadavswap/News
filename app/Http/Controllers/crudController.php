@@ -26,7 +26,7 @@ class crudController extends Controller
         }
 
         if(Input::has('category_id')){
-            $data['$category_id'] = implode(',',$data['category_id'])
+            $data['category_id'] = implode(',',$data['category_id']);
         }
         DB::table($tbl)->insert($data);
         session::flash('message','Data Inserted Successfully');
@@ -40,10 +40,17 @@ class crudController extends Controller
         $tbl = decrypt($data['tbl']);
         unset($data['tbl']);
         $data['updated_at'] = date('Y-m-d H:i:s');
+
+
+        if(Input::has('category_id')){
+            $data['category_id'] = implode(',',$data['category_id']);
+        }
+
+
         DB::table($tbl)->where(key($data),reset($data))->update($data);
         session::flash('message','Data Updated Successfully');
         return redirect()->back();
-        print_r($data);
+        // print_r($data);
 
     }
     public function uploadimage($location,$imagename){
