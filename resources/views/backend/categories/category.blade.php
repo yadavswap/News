@@ -88,7 +88,7 @@
 						<tr>
 							<td>
 							<input type="checkbox" name="select-data[]" value="{{$cat->cid}}"> 
-							<a href="#">{{$cat->title}}</a>
+							<a href="{{url('editcategory')}}/{{$cat->cid}}">{{$cat->title}}</a>
 							</td>
 					
 							<td>{{$cat->slug}}</td>

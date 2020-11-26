@@ -74,8 +74,28 @@ use Session;class adminController extends Controller
     }
 
     public function allposts(){
-        $posts = DB::table('posts')->paginate(1);
+        $posts = DB::table('posts')->paginate(20);
+        foreach($posts as $post){
+            $categories = explode(',',$post->category_id);
+            foreach($categories as $cat){
+                $postcat = DB::table('categories')->where('cid',$cat)->value('title');
+                $postcategory[]= $postcat;
+                $postcat= implode(', ',$postcategory);
+
+
+            }
+            $post->category_id = $postcat;
+            $postcategory = [];
+
+        }
 
         return view ('backend.posts.allposts',['posts'=>$posts]);
+    }
+    public function editposts($id){
+        $data = DB::table('posts')->where('pid',$id)->first();
+        $categories = DB::table('categories')->get();
+
+        $postcat = explode(',',$data->category_id);
+        return view ('backend.posts.editposts',['data'=>$data,'categories'=> $categories,'postcat'=>$postcat]);
     }
 }
