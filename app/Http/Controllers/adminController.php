@@ -74,7 +74,7 @@ use Session;class adminController extends Controller
     }
 
     public function allposts(){
-        $posts = DB::table('posts')->paginate(20);
+        $posts = DB::table('posts')->orderby('pid','DESC')->paginate(20);
         foreach($posts as $post){
             $categories = explode(',',$post->category_id);
             foreach($categories as $cat){

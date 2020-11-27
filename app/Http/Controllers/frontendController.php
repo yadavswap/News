@@ -31,8 +31,13 @@ class frontendController extends Controller
 
     public function index(){
 
-        $featured = DB::table('posts')->where('category_id' ,'LIKE','%14%')->orderby('pid','DESC')->get();
-        return view('frontend.index',['featured'=>$featured]);
+        $featured = DB::table('posts')->where('category_id' ,'LIKE','%22%')->orderby('pid','DESC')->get();
+        $general = DB::table('posts')->where('category_id' ,'LIKE','%24%')->orderby('pid','DESC')->get();
+        $business = DB::table('posts')->where('category_id' ,'LIKE','%20%')->orderby('pid','DESC')->get();
+        $tech = DB::table('posts')->where('category_id' ,'LIKE','%25%')->orderby('pid','DESC')->get();
+
+
+        return view('frontend.index',['featured'=>$featured,'general'=>$general,'business'=>$business,'tech'=>$tech]);
     }
 
     public function category(){
