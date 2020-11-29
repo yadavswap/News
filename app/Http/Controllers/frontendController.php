@@ -35,17 +35,34 @@ class frontendController extends Controller
         $general = DB::table('posts')->where('category_id' ,'LIKE','%24%')->orderby('pid','DESC')->get();
         $business = DB::table('posts')->where('category_id' ,'LIKE','%20%')->orderby('pid','DESC')->get();
         $tech = DB::table('posts')->where('category_id' ,'LIKE','%25%')->orderby('pid','DESC')->get();
+        $sport = DB::table('posts')->where('category_id' ,'LIKE','%26%')->orderby('pid','DESC')->get();
+        $health = DB::table('posts')->where('category_id' ,'LIKE','%23%')->orderby('pid','DESC')->get();
+        $travel = DB::table('posts')->where('category_id' ,'LIKE','%23%')->orderby('pid','DESC')->get();
+        $enter = DB::table('posts')->where('category_id' ,'LIKE','%27%')->orderby('pid','DESC')->get();
+        $edu = DB::table('posts')->where('category_id' ,'LIKE','%15%')->orderby('pid','DESC')->get();
+        $pol = DB::table('posts')->where('category_id' ,'LIKE','%29%')->orderby('pid','DESC')->get();
+        $style = DB::table('posts')->where('category_id' ,'LIKE','%30%')->orderby('pid','DESC')->get();
 
 
-        return view('frontend.index',['featured'=>$featured,'general'=>$general,'business'=>$business,'tech'=>$tech]);
+
+
+
+        return view('frontend.index',['featured'=>$featured,'general'=>$general,'business'=>$business,'tech'=>$tech,'sport'=>$sport,'health'=>$health,'travel'=>$travel,'enter'=>$enter,'edu'=>$edu
+        ,'pol'=>$pol,'style'=>$style]);
     }
 
     public function category(){
         return view('frontend.category');
     }
 
-    public function article(){
-        return view('frontend.article');
+    public function article($slug){
+        $data = DB::table('posts')->where('slug',$slug)->first();
+        $category = explode(',',$data->category_id);
+        $category = $category[0];
+        $releated = DB::table('posts')->where('category_id','LIKE','%'.$data->category_id.'%')->get();
+        $latest = DB::table('posts')->where('status','publish')->orderby('pid','DESC')->get();
+
+        return view('frontend.article',['data'=>$data,'releated'=>$releated,'latest'=>$latest]);
     }
 
 }
