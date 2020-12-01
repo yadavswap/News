@@ -60,3 +60,4 @@ Route::get('allposts', 'adminController@allposts');
 
 Route::get('editposts/{id}', 'adminController@editposts')->name('editposts');
 Route::post('updatepost/{id}','crudController@updatedata')->name('updateposts');
+Route::get('search_content','frontController@searchContent');

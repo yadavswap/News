@@ -67,7 +67,8 @@
 		</nav>
 	</div>
 	<div class="col-md-2 search">
-    	<input type="search" class="form-control" /><span class="glyphicon glyphicon-search btn"></span>
+    	<input type="search" id="search_content" class="form-control" /><span class="glyphicon glyphicon-search btn"></span>
+        <div class="search-output"></div>
     </div>
 </div> 
 {{-- header end --}}
@@ -130,6 +131,28 @@
 <div class="col-md-12 text-center copyright">
 Copyright &copy; {{date('Y')}}  <a href="#">NEWSKATTA</a> Powered by: <a href="prowiggle.com">ProWiggle Data Solutions Pvt. Ltd.</a>
 </div>
+<script>
+    $('#search_content').keyup(function(){
+        var text = $('#search_content').val();
+        if(text.length < 1){
+            $('#search-output').hide();
+
+            return false;
+        }else{
+            $.ajax({
+                type : "get",
+                url : "{{url('search_content')}}",
+                data :  {text:text},
+                success:function(res){
+                    $('#search-output').show();
+
+                    $('#search-output').html(res);
+                }
+            })
+        }
+    })
+    </script>
+
 
 </body>
 </html>

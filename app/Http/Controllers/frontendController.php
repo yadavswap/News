@@ -71,4 +71,24 @@ class frontendController extends Controller
         return view('frontend.article',['data'=>$data,'releated'=>$releated,'latest'=>$latest]);
     }
 
+    public function searchContent(){
+        $url = "http://localhost/news/article";
+        $text = $_GET;
+        $data = DB::table('posts')->where('title','LIKE','%'.$text.'%')->orwhere('description','LIKE','%'.$text.'%')->get();
+        $output = '';
+        echo '<ul class="search-result">';
+        if(count($data ) > 0){
+            foreach($data as $d){
+
+            
+                echo '<li><a href="' .$url. '/'.$d->slug.'">'.$d->title.'</a></li>';
+
+        }
+    }else{
+        echo '<li><a >Sorry ! No Data Found</a></li>';
+
+
+    }echo '</ul>';
+    return $output;
+}
 }

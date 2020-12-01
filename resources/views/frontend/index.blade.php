@@ -206,7 +206,7 @@
 
 			<div class="row" style="margin-bottom:30px;">
             <div class="col-md-4">
-				<img href="{{url('article')}}/{{$e->slug}}" src="{{url('/posts')}}/{{$e->image}}" width="100%" />
+				<a href="{{url('article')}}/{{$e->slug}}"><img href="{{url('article')}}/{{$e->slug}}" src="{{url('/posts')}}/{{$e->image}}" width="100%" /></a>
             </div>
          
           
