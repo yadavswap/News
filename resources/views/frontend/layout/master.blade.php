@@ -16,10 +16,10 @@
 <div class="col-md-12 top" id="top">
 	<div class="col-md-9 top-left">
     	<div class="col-md-3">
-        <span class="day">{{date('l,m,d,y')}}</span> 
+        <span class="day">{{date($lastnews->created_at)}}</span> 
         </div>
         <div class="col-md-9">
-        	<span class="latest">Latest: </span> <a href="#">Wireless Headphones are now on Market</a>
+        <span class="latest">Latest: </span> <a >{{$lastnews->slug}}</a>
         </div>
     </div>
     <div class="col-md-3">
@@ -37,7 +37,7 @@
     @endif
     </div>
     <div class="col-md-8">
-    	<img src="images/final-news-site_06.gif" width="100%" />
+    	{{--  <img src="images/final-news-site_06.gif" width="100%" />  --}}
     </div>
 </div>
 

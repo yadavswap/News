@@ -19,6 +19,7 @@ Route::get('/', 'frontendController@index')->name('index');
 Route::get('article/{slug}', 'frontendController@article')->name('article');
 
 Route::get('category', 'frontendController@category')->name('category');
+Route::get('category/{slug}', 'frontendController@category')->name('category');
 
 Route::get('article', 'frontendController@article')->name('article');
 

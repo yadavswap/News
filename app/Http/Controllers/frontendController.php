@@ -15,6 +15,7 @@ class frontendController extends Controller
             foreach($setting->social as $social){
                 $icon = explode('.',$social);
                 // $data[$parts[0]] = isset($parts[1]) ? $parts[1] : null;
+                $lastnews = DB::table('posts')->where('status','publish')->orderby('pid','DESC')->first();
 
             } 
         }
@@ -22,6 +23,7 @@ class frontendController extends Controller
         view()->share([
             'categories' => $categories,
             'setting' => $setting,
+            'lastnews'=>$lastnews,
              ]);
 
         // return view('frontend.layout.master', compact('categories'));
@@ -51,8 +53,12 @@ class frontendController extends Controller
         ,'pol'=>$pol,'style'=>$style]);
     }
 
-    public function category(){
-        return view('frontend.category');
+    public function category($slug){
+        $cat = DB::table('categories')->where('slug',$slug)->first();
+        $posts = DB::table('posts')->where('pid','LIKE','%'.$cat->cid.'%')->get();
+        $latest = DB::table('posts')->where('status','publish')->orderby('pid','DESC')->get();
+
+        return view('frontend.category',['posts'=>$posts,'cat'=>$cat,'latest'=>$latest]);
     }
 
     public function article($slug){
