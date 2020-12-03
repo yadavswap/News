@@ -75,6 +75,22 @@ class frontendController extends Controller
 
         return view('frontend.article',['data'=>$data,'releated'=>$releated,'latest'=>$latest]);
     }
+    public function page($slug){
+        $data = DB::table('pages')->where('slug',$slug)->first();
+        // $releated = DB::table('posts')->where('category_id','LIKE','%'.$data->category_id.'%')->get();
+        $latest = DB::table('posts')->where('status','publish')->orderby('pid','DESC')->get();
+
+        return view('backend.pages.page',['data'=>$data,'latest'=>$latest]);
+
+    }
+    public function contact(){
+        // $data = DB::table('pages')->where('slug',$slug)->first();
+        // // $releated = DB::table('posts')->where('category_id','LIKE','%'.$data->category_id.'%')->get();
+        $latest = DB::table('posts')->where('status','publish')->orderby('pid','DESC')->get();
+
+        return view('frontend.contact',['latest'=>$latest]);
+
+    }
 
     public function searchContent(){
         $url = "http://localhost/news/article";

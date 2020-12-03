@@ -11,12 +11,12 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('contact', 'frontendController@contact');
+
 
 Route::get('/', 'frontendController@index')->name('index');
 Route::get('article/{slug}', 'frontendController@article')->name('article');
+Route::get('page/{slug}', 'frontendController@page')->name('page');
 
 Route::get('category', 'frontendController@category')->name('category');
 Route::get('category/{slug}', 'frontendController@category')->name('category');
@@ -70,3 +70,4 @@ Route::get('allpages', 'adminController@allpages');
 
 Route::get('editpages/{id}', 'adminController@editpages')->name('editpages');
 Route::post('updatepage/{id}','crudController@updatedata')->name('updatepages');
+// Route::get('contact','frontController@contact');

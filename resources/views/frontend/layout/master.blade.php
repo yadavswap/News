@@ -95,29 +95,22 @@
         <div class="col-md-6">
             <div class="row">
               <ul class="nav">
+                  
                 @foreach($pages as $page)
 
                 <li><a href="{{url('page')}}/{{$page->slug}}"  class="text-uppercase">{{$page->title}}</a>
                 </li>
                 @endforeach
+                <li>
+                <a href="{{url('contact')}}"  class="text-uppercase">Contact Us</a>
+                </li>
+
             </ul> 
             </div>
         </div>
         
     </div>
-    <div class="col-md-4">
-        <h3 style="border-bottom:2px solid #ccc;"><span style="border-bottom:2px solid #f00;">Contact Us</span></h3>
-        @if($setting->image)
-        <img src="{{url('/settings')}}/{{$setting->image}}" width="50%"/>
-        @endif     
-        <br /><br />  
-         Follow us at:<br /><br />
-         {{--  @foreach($setting->social as $social)
-        <a href="{{$social}}"><i class="fa fa-">{{$social}}</a>
-
-         @endforeach  --}}
-       
-    </div>
+   
 </div>
 
 <div class="col-md-12 text-center copyright">
