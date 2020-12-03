@@ -55,8 +55,8 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-eye"></i>All Pages</a></li>
-              <li><a href="#"><i class="fa fa-plus-circle"></i>Add Pages</a></li>
+            <li><a href="{{url("allpages")}}"><i class="fa fa-eye"></i>All Pages</a></li>
+            <li><a href="{{url("addpage")}}"><i class="fa fa-plus-circle"></i>Add Pages</a></li>
             </ul>
         </li>
         <li class="treeview">
@@ -124,7 +124,7 @@
 
     <footer>
         <div class="col-sm-6">
-            Copyright &copy; 2018 <a href="http://www.webtrickshome.com">Webtrickshome.com</a> All rights reserved. 
+            Copyright &copy; 2020 <a href="http://www.webtrickshome.com">ProWiggle Data Solutions Pvt Ltd</a> All rights reserved. 
         </div>
         <div class="col-sm-6">
             <span class="pull-right">Version 2.2.3</span>

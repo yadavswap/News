@@ -100,4 +100,27 @@ use Session;class adminController extends Controller
         $postcat = explode(',',$data->category_id);
         return view ('backend.posts.editposts',['data'=>$data,'categories'=> $categories,'postcat'=>$postcat]);
     }
+    // page
+    
+    public function addpage(){
+
+        return view ('backend.pages.addpage');
+    }
+
+    public function allpages(){
+        $pages = DB::table('pages')->get();
+       
+        $published = DB::table('pages')->where('status','publish')->count();
+        $allpages = DB::table('pages')->count();
+
+        return view ('backend.pages.allpages',['pages'=>$pages,'published'=>$published,'allpages'=>$allpages]);
+    }
+    public function editpages($id){
+        $data = DB::table('pages')->where('pageid',$id)->first();
+
+        return view ('backend.pages.editpages',['data'=>$data]);
+    }
+    
+
 }
+

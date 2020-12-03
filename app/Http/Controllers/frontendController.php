@@ -10,6 +10,8 @@ class frontendController extends Controller
     public function __construct(){
         $categories = DB::table('categories')->where('status' ,'on')->get();
         $setting = DB::table('settings')->first();
+        $pages = DB::table('pages')->where('status' ,'publish')->get();
+
         if($setting){
             $setting->social = explode(',',$setting->social);
             foreach($setting->social as $social){
@@ -24,6 +26,7 @@ class frontendController extends Controller
             'categories' => $categories,
             'setting' => $setting,
             'lastnews'=>$lastnews,
+            'pages'=>$pages,
              ]);
 
         // return view('frontend.layout.master', compact('categories'));
@@ -63,6 +66,8 @@ class frontendController extends Controller
 
     public function article($slug){
         $data = DB::table('posts')->where('slug',$slug)->first();
+        $views = $data->views;
+        DB::table('posts')->where('slug',$slug)->update(['views'=>$views + 1]);
         $category = explode(',',$data->category_id);
         $category = $category[0];
         $releated = DB::table('posts')->where('category_id','LIKE','%'.$data->category_id.'%')->get();
