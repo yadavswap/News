@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Input;
 use DB;
 use Session;class adminController extends Controller
 {
+    
     //
     public function adminindex(){
         return view ('backend.adminindex');
@@ -120,6 +121,8 @@ use Session;class adminController extends Controller
 
         return view ('backend.pages.editpages',['data'=>$data]);
     }
+
+    
     
 
 }
