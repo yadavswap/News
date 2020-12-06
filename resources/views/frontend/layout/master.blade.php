@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<div class="col-md-12 top" id="top">
+{{-- <div class="col-md-12 top" id="top">
 	<div class="col-md-9 top-left">
     	<div class="col-md-3">
         <span class="day">{{date($lastnews->created_at)}}</span> 
@@ -23,17 +23,14 @@
         </div>
     </div>
     <div class="col-md-3">
-        {{--  @foreach($setting->social as $key->$social)
-        <a href="{{$social}}"><i class="fa fa-{{$icons}}"></i></a>
-
-         @endforeach      --}}
+       
     </div>
-</div>
+</div> --}}
 
 <div class="col-md-12 brand">
 	<div class="col-md-4 name">
     @if($setting->image)
-    <img src="{{url('/settings')}}/{{$setting->image}}" width="50%"/>
+    <img src="{{url('/settings')}}/{{$setting->image}}" width="50%" class="center"/>
     @endif
     </div>
     <div class="col-md-8">

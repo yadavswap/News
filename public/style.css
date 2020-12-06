@@ -226,3 +226,8 @@ a{
 	padding: relative;
 	top:5px;
 }
+.center{
+	display: block;
+	margin-left: 500px;
+	margin-right: auto;
+}
