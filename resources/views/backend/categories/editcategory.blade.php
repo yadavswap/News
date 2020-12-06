@@ -29,7 +29,7 @@
 
 				<div class="form-group">
 					<label>Slug</label>
-					<input type="text" name="slug" id="slug" class="form-control" readonly="" value={{$singledata->slug}}>
+					<input type="text" name="slug" id="slug" class="form-control"  value={{$singledata->slug}}>
 				</div>
 
 				<div class="form-group">

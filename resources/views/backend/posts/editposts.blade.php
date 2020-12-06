@@ -32,6 +32,20 @@
 						</div>	
 						<div class="form-group">	
 							<input type="text" name="slug" class="form-control" placeholder="Enter slug here" id="slug" value="{{$data->title}}">				
+						</div>	
+						<div class="form-group">	
+							<input type="text" name="place" class="form-control" placeholder="Enter place here" id="place">				
+						</div>	
+						<div class="form-group">
+							<label>Editor</label>
+							<select class="form-control" name="editor">
+								<option>Nadeem Khan</option>
+								<option>Kavita More Nagapure</option>
+								<option>NewsKatta</option>
+								<option>Other</option>
+
+		
+							</select>
 						</div>						
 						<div class="form-group">		
 							<textarea class="form-control" name="description" rows="15" >{!!$data->description!!}</textarea>

@@ -24,6 +24,11 @@
 			<div class="col-md-8">
 				<div class="col-md-12" style="padding:15px 15px 30px 0px;">				
 					<div class="col-md-12">
+						<div class="text-left view-count">
+						<h4>Published by: {{$data->editor}}</h4><br/>
+						<h4>Place: {{$data->place}}</h4>
+
+						</div>
 						<div class="text-right view-count">
 							<h3>
 								<i class="fa fa-eye"></i>

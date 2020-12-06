@@ -22,7 +22,8 @@ class CreatePostsTable extends Migration
             $table->string('category_id');
             $table->string('image');
             $table->string('status');
-
+            $table->string('place');
+            $table->string('editor');
 
             $table->timestamps();
         });
