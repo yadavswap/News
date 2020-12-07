@@ -22,7 +22,7 @@
 					</div>
 					<div class="row">
 						@foreach($posts as $key => $p)
-						@if($key > 0 && $key < 10)
+						@if($key > 0 && $key < 3)
 						<div class="col-md-6">
 							<img  href="{{url('posts')}}/{{$p->image}}" src="{{url('/posts')}}/{{$p->image}}" width="100%" style="margin-bottom:15px;" />
 							{!! substr($p->description,0,100)!!}
