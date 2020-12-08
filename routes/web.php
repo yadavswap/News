@@ -71,3 +71,8 @@ Route::get('allpages', 'adminController@allpages');
 Route::get('editpages/{id}', 'adminController@editpages')->name('editpages');
 Route::post('updatepage/{id}','crudController@updatedata')->name('updatepages');
 // Route::get('contact','frontController@contact');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'HomeController@logout')->name('home');

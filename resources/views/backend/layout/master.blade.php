@@ -19,7 +19,7 @@
 {{-- sidebar start --}}
 <div class="sidebar">
 	<ul class="sidebar-menu">
-		<li><a href="index.html" class="dashboard"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+  <li><a href="{{url('admin')}}" class="dashboard"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
 		<li class="treeview">
             <a href="#">
               <i class="fa fa-bookmark-o"></i> <span>Posts</span>
@@ -35,16 +35,16 @@
         </li>
         <li class="treeview">
             <a href="#">
-              <i class="fa fa-image"></i> <span>Gallery</span>
+              <i class="fa fa-image"></i> <span>Ads</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-eye"></i>All Images</a></li>
-              <li><a href="#"><i class="fa fa-plus-circle"></i>Add Images</a></li>
-              <li><a href="#"><i class="fa fa-eye"></i>All Videos</a></li>
-              <li><a href="#"><i class="fa fa-plus-circle"></i>Add Videos</a></li>
+            <li><a href="{{url('allads')}}"><i class="fa fa-eye"></i>All Ads</a></li>
+            <li><a href="{{url('addads')}}"><i class="fa fa-plus-circle"></i>Add Ads</a></li>
+              {{--  <li><a href="#"><i class="fa fa-eye"></i>All Videos</a></li>
+              <li><a href="#"><i class="fa fa-plus-circle"></i>Add Videos</a></li>  --}}
             </ul>
         </li>
         <li class="treeview">
@@ -59,14 +59,7 @@
             <li><a href="{{url("addpage")}}"><i class="fa fa-plus-circle"></i>Add Pages</a></li>
             </ul>
         </li>
-        <li class="treeview">
-            <a href="menu.html">
-              <i class="fa fa-file"></i> <span>Menu</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>            
-        </li>
+    
         <li class="treeview">
         <a href="{{url('set')}}">
               <i class="fa fa-gear"></i> <span>Settings</span>
@@ -78,18 +71,7 @@
               <li><a href="{{url('viewcategory')}}"><i class="fa fa-eye"></i>All Reports</a></li>
             </ul>  --}}
         </li>
-        <li class="treeview">
-            <a href="#">
-              <i class="fa fa-user-plus"></i> <span>Users</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-eye"></i>All Users</a></li>
-              <li><a href="#"><i class="fa fa-plus-circle"></i>Add Users</a></li>
-            </ul>
-        </li>
+     
         <li class="treeview">
             <a href="#">
               <i class="fa fa-address-book"></i> <span>Active User</span>
@@ -98,8 +80,9 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-edit"></i>Edit Profile</a></li>
-              <li><a href="login.html"><i class="fa fa-power-off"></i>Log Out</a></li>
+              <li><a href="{{url('register')}}"><i class="fa fa-user"></i>Add User</a></li>
+
+            <li><a href="{{url('logout')}}"><i class="fa fa-power-off"></i>Log Out</a></li>
             </ul>
         </li>		
 

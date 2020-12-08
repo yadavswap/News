@@ -8,6 +8,9 @@ use DB;
 use Session;class adminController extends Controller
 {
     
+    public function __construct(){
+        $this->middleware('auth');
+    }
     //
     public function adminindex(){
         return view ('backend.adminindex');
