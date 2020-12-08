@@ -125,8 +125,20 @@ use Session;class adminController extends Controller
         return view ('backend.pages.editpages',['data'=>$data]);
     }
 
-    
-    
+    public function addads(){
 
+        return view ('backend.ads.addads');
+    }
+    
+    public function allads(){
+        $data = DB::table('ads')->orderby('aid','DESC')->get();
+
+        return view ('backend.ads.allads',['data'=>$data]);
+    }
+    public function editads($id){
+        $data = DB::table('ads')->where('aid',$id)->first();
+
+        return view ('backend.ads.editads',['data'=>$data]);
+    }
 }
 

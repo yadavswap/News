@@ -76,3 +76,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'HomeController@logout')->name('home');
+// 
+
+Route::get('addads', 'adminController@addads');
+Route::post('addads', 'crudController@insertdata');
+Route::get('allads', 'adminController@allads');
+
+Route::get('editads/{id}', 'adminController@editads')->name('editposts');
+Route::post('updateads/{id}','crudController@updatedata')->name('updateposts');
