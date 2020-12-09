@@ -15,7 +15,7 @@
 							
 						<img href="{{url('posts')}}/{{$p->image}}" src="{{url('/posts')}}/{{$p->image}}" width="100%" style="margin-bottom:15px;" />
 						{!! substr($p->description,0,3000)!!}
-						<a href="{{url('article')}}/{{$p->slug}}"> Read more &raquo; </a>
+						<a href="{{url('article')}}/{{$p->pid}}"> Read more &raquo; </a>
 						@endif
 						@endforeach
 
@@ -26,7 +26,7 @@
 						<div class="col-md-6">
 							<img  href="{{url('posts')}}/{{$p->image}}" src="{{url('/posts')}}/{{$p->image}}" width="100%" style="margin-bottom:15px;" />
 							{!! substr($p->description,0,100)!!}
-						<a href="{{url('article')}}/{{$p->slug}}"> Read more &raquo; </a>
+						<a href="{{url('article')}}/{{$p->pid}}"> Read more &raquo; </a>
 						</div>
 						@endif
 						@endforeach
@@ -46,12 +46,12 @@
 						
 						<div class="col-md-4">
 							<div class="row">
-								<img href="{{url('article')}}/{{$l->slug}}" src="{{url('/posts')}}/{{$l->image}}" width="100%" style="margin-left:-15px;" />
+								<img href="{{url('article')}}/{{$l->pid}}" src="{{url('/posts')}}/{{$l->image}}" width="100%" style="margin-left:-15px;" />
 							</div>
 						</div>
 						<div class="col-md-8">
 							<div class="row" style="padding-left:10px;">
-								<h4><a href="{{url('article')}}/{{$l->slug}}">{{$l->title}}</a></h4>
+								<h4><a href="{{url('article')}}/{{$l->pid}}">{{$l->title}}</a></h4>
 							</div>
 						</div>
 					</div>
