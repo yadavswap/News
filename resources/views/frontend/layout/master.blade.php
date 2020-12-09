@@ -64,8 +64,8 @@
 		</nav>
 	</div>
 	<div class="col-md-2 search">
-    	<input type="search" id="search_content" class="form-control" /><span class="glyphicon glyphicon-search btn"></span>
-        <div class="search-output"></div>
+    	<input type="search" id="search_content" class="form-control" />
+        {{-- <div class="search-output"></div> --}}
     </div>
 </div> 
 {{-- header end --}}

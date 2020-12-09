@@ -34,12 +34,12 @@
 							<input type="text" name="place" class="form-control" placeholder="Enter place here" id="place">				
 						</div>	
 						<div class="form-group">
-							<label>Editor</label>
+							<label>By</label>
 							<select class="form-control" name="editor">
-								<option>Nadeem Khan</option>
-								<option>Kavita More Nagapure</option>
-								<option>NewsKatta</option>
-								<option>Other</option>
+								<option>न्यूज कट्टा ब्युरो</option>
+								<option>नदीम खान</option>
+								<option>कविता मोरे/ नागापूरे</option>
+								<option>न्यूज कट्टा</option>
 
 		
 							</select>

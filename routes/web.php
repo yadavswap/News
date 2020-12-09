@@ -15,7 +15,7 @@ Route::get('contact', 'frontendController@contact');
 
 
 Route::get('/', 'frontendController@index')->name('index');
-Route::get('article/{slug}', 'frontendController@article')->name('article');
+Route::get('article/{id}', 'frontendController@article')->name('article');
 Route::get('page/{slug}', 'frontendController@page')->name('page');
 
 Route::get('category', 'frontendController@category')->name('category');

@@ -25,6 +25,7 @@ use Session;class adminController extends Controller
         if($singledata == NULL){
             return redirect('viewcategory');
         }
+        // $categories = DB::table('categories')->get();
 
         $data = DB::table('categories')->get();
         return view ('backend.categories.editcategory',['data'=>$data,'singledata'=> $singledata]);

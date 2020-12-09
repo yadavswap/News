@@ -67,10 +67,10 @@ class frontendController extends Controller
         return view('frontend.category',['posts'=>$posts,'cat'=>$cat,'latest'=>$latest]);
     }
 
-    public function article($slug){
-        $data = DB::table('posts')->where('slug',$slug)->first();
+    public function article($pid){
+        $data = DB::table('posts')->where('pid',$pid)->first();
         $views = $data->views;
-        DB::table('posts')->where('slug',$slug)->update(['views'=>$views + 1]);
+        DB::table('posts')->where('pid',$pid)->update(['views'=>$views + 1]);
         $category = explode(',',$data->category_id);
         $category = $category[0];
         $releated = DB::table('posts')->where('category_id','LIKE','%'.$data->category_id.'%')->get();

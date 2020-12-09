@@ -24,7 +24,7 @@
         <input type="hidden" name="cid" value="{{$singledata->cid}}">
 				<div class="form-group">
 					<label>Name</label>
-					<input type="text" name="title" id="category_name" class="form-control" value={{$singledata->title}}>
+				<input type="text"  name="title" id="category_name" class="form-control" value={{$singledata->title}}>
 				</div>
 
 				<div class="form-group">
@@ -37,9 +37,10 @@
 					<select class="form-control" name="status">
                         <option>{{$singledata->status}}</option>
                         @if($singledata->status == 'off')
-                        <option>ON</option>
+						<option>on</option>
+			
                         @else
-                        <option>OFF</option>
+                        <option>off</option>
                         @endif
 
 					</select>
@@ -92,7 +93,7 @@
 						<tr>
 							<td>
 							<input type="checkbox" name="select-data[]" value="{{$cat->cid}}"> 
-							<a href="#">{{$cat->title}}</a>
+							<a href="{{url('editcategory')}}/{{$cat->cid}}">{{$cat->title}}</a>
 							</td>
 					
 							<td>{{$cat->slug}}</td>
