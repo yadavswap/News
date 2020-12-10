@@ -28,18 +28,35 @@
 </div> --}}
 
 <div class="col-md-12 brand">
+    	
+	 <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'mr'}, 'google_translate_element');
+        }
+      </script>
+      
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<div class="col-md-4 name">
+
     @if($setting->image)
+
     <img src="{{url('/settings')}}/{{$setting->image}}" width="50%" class="center"/>
     @endif
+    <div id="google_translate_element"></div>
+
     </div>
+    
     <div class="col-md-8">
-    	{{--  <img src="images/final-news-site_06.gif" width="100%" />  --}}
+        {{--  <img src="images/final-news-site_06.gif" width="100%" />  --}}
+        
     </div>
+    
 </div>
 
 <div class="col-md-12 main-menu">
+    
 	<div class="col-md-10 menu">
+        
 		<nav class="navbar">
 			<div class="navbar-header">
     			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar"> 
@@ -49,7 +66,8 @@
             		<span class="icon-bar"></span>
         		</button>
         		<span class="navbar-brand"><font color="#555555">NEWS</font><font color="#2ca0c9">KATTA</font></span>
-    		</div>
+            </div>
+            
     		<div class="collapse navbar-collapse" id="mynavbar">
     			<ul class="nav nav-justified">
                     <li><a href="{{url('/')}}" class="active"><span class="glyphicon glyphicon-home"></span></a></li>
@@ -59,15 +77,18 @@
                     <li><a href="{{url("category")}}/{{$cat->slug}}" class="text-uppercase">{{$cat->title}}</a></li>
                     @endif
                     @endforeach
-
+                    
     				
         		</ul> 
 			</div>
 		</nav>
-	</div>
-	<div class="col-md-2 search">
-    	<input type="search" id="search_content" class="form-control" />
-        {{-- <div class="search-output"></div> --}}
+    </div>
+    
+
+
+
+	<div class="col-md-2 search" >
+    	{{-- <input type="search" id="search_content" class="form-control" /> --}}
     </div>
 </div> 
 {{-- header end --}}
