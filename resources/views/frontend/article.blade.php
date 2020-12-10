@@ -28,8 +28,6 @@
 				<div class="col-md-12" style="padding:15px 15px 0px 0px;">				
 					<div class="col-md-12">
 						<div class="text-left view-count ">
-							{{-- <h4>By {{$data->pid}}</h4><br/> --}}
-
 						<h4>By {{$data->editor}}</h4><br/>
 						<h4> {{$data->place}}</h4>
 
@@ -90,10 +88,14 @@
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
+         
+                                    var disqus_config = function () {
+                                    this.page.url = '{{Request::url()}}';  // Replace PAGE_URL with your page's canonical URL variable
+                                    this.page.identifier ={{$data->pid}} ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                    };
     (function() { 
 		// DON'T EDIT BELOW THIS LINE
-		this.page.url = '{{Request::url()}}';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier ={{$data->slug}} ;
+	
     var d = document, s = d.createElement('script');
     s.src = 'https://http-newskatta-in.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
