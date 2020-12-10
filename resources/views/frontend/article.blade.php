@@ -1,5 +1,6 @@
 @extends('frontend.layout.master')
 @section( 'content')
+<script id="dsq-count-scr" src="//http-newskatta-in.disqus.com/count.js" async></script>
 <div class="wrapper">
 	<div id="fb-root"></div>
 	
@@ -27,6 +28,8 @@
 				<div class="col-md-12" style="padding:15px 15px 0px 0px;">				
 					<div class="col-md-12">
 						<div class="text-left view-count ">
+							{{-- <h4>By {{$data->pid}}</h4><br/> --}}
+
 						<h4>By {{$data->editor}}</h4><br/>
 						<h4> {{$data->place}}</h4>
 
@@ -76,6 +79,28 @@
 						
 						<script type="IN/Share" data-url="{{url('article')}}/{{$data->slug}}" data-size="small"></script>
 						</div>
+						<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { 
+		// DON'T EDIT BELOW THIS LINE
+		this.page.url = '{{Request::url()}}';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier ={{$data->slug}} ;
+    var d = document, s = d.createElement('script');
+    s.src = 'https://http-newskatta-in.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 					</div>
 						<div class="col-md-12 also" >
 							<h3>You May Also Like</h3>

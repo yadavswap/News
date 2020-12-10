@@ -9,10 +9,13 @@
 <link href="{{url('/style.css')}}" rel="stylesheet"  />
 <script src="{{url('/js/jquery.min.js')}}"></script>
 <script src="{{url('/js/bootstrap.min.js')}}"></script>
-
+{{-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-f92c1bae-c8cc-4f8d-9100-e2213a314d82"></div> --}}
+<a class="fx-widget" data-widget="coronastatus" data-lang="en" data-base-url="https://www.fxempire.com" data-url="//www.fxempire.com" href="https://www.fxempire.com" rel="nofollow" > </a> <script async charset="utf-8" src="https://widgets.fxempire.com/widget.js" ></script>
 </head>
 
 <body>
+    
 {{-- <div class="col-md-12 top" id="top">
 	<div class="col-md-9 top-left">
     	<div class="col-md-3">
@@ -70,7 +73,7 @@
             
     		<div class="collapse navbar-collapse" id="mynavbar">
     			<ul class="nav nav-justified">
-                    <li><a href="{{url('/')}}" class="active"><span class="glyphicon glyphicon-home"></span></a></li>
+                    <li><a href="#" class="active"><span class="glyphicon glyphicon-home"></span></a></li>
                     @foreach($categories as $key=> $cat)
                     @if($key < 5 )
                         
@@ -136,6 +139,7 @@
 <div class="col-md-12 text-center copyright">
 Copyright &copy; {{date('Y')}}  <a href="#">NEWSKATTA</a> Powered by: <a href="prowiggle.com">ProWiggle Data Solutions Pvt. Ltd.</a>
 </div>
+
 <script>
     $('#search_content').keyup(function(){
         var text = $('#search_content').val();
