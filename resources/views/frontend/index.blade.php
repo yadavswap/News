@@ -1,6 +1,7 @@
 
 @extends('frontend.layout.master')
 @section( 'content')
+
 <div class="wrapper">
 	@if(count($featured) > 0)
 	<div class="row">
@@ -223,7 +224,18 @@
 
 
         <div class="col-md-4">
-        <div class="col-md-12" style="border:1px solid #ccc; padding:15px;">
+			{{-- START MENU --}}
+			<div class="col-md-12" style="border:1px solid #ccc; padding:15px;">
+				@foreach ( $categories as $key => $cat)
+				@if($key > 0 && $key > 6)
+					
+				<a href="{{url("category")}}/{{$cat->slug}}"><h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">{{$cat->title}}</span></h3></a>
+				@endif
+				@endforeach
+
+			  </div>
+ 			{{-- STOP MENU --}}
+			<div class="col-md-12" style="border:1px solid #ccc; padding:15px;">
 			<h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">EDUCATION</span></h3>
 			@foreach($edu as $key => $edu)
 			@if( $key > 0 && $key < 6 )

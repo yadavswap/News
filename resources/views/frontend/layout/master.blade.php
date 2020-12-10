@@ -53,9 +53,11 @@
     		<div class="collapse navbar-collapse" id="mynavbar">
     			<ul class="nav nav-justified">
                     <li><a href="{{url('/')}}" class="active"><span class="glyphicon glyphicon-home"></span></a></li>
-                    @foreach($categories as $cat)
+                    @foreach($categories as $key=> $cat)
+                    @if($key < 5 )
                         
-                <li><a href="{{url("category")}}/{{$cat->slug}}" class="text-uppercase">{{$cat->title}}</a></li>
+                    <li><a href="{{url("category")}}/{{$cat->slug}}" class="text-uppercase">{{$cat->title}}</a></li>
+                    @endif
                     @endforeach
 
     				
