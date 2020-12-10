@@ -74,7 +74,7 @@
                     @foreach($categories as $key=> $cat)
                     @if($key < 5 )
                         
-                    <li><a href="{{url("category")}}/{{$cat->slug}}" class="text-uppercase">{{$cat->title}}</a></li>
+                    <li><a href="{{url("category")}}/{{$cat->slug}}" class="text-uppercase" >{{$cat->title}}</a></li>
                     @endif
                     @endforeach
                     

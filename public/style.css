@@ -31,7 +31,7 @@
 .menu ul li:hover > a {
 	color:#242424;}
 .menu ul li:hover .active{
-	background:#242424;
+	background:#000080;
 	color:#fff;
 	}
 .search{
@@ -51,10 +51,10 @@ top:5px;
 }
 		
 .main-menu{
-	background:#242424;
+	background:#000080;
 	padding:4px 0px;
 	height:55px;
-	border-top:5px solid #249bc6;
+	border-top:5px solid #000080;
 	margin-top:30px;
 	margin-bottom:30px;
 	}	
