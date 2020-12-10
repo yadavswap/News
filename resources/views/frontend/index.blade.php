@@ -2,6 +2,21 @@
 @extends('frontend.layout.master')
 @section( 'content')
 
+
+
+
+	
+	 <script type="text/javascript">
+	  function googleTranslateElementInit() {
+	  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+	  }
+	</script>
+	
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<div id="google_translate_element"></div>
+
+	
+	
 <div class="wrapper">
 	@if(count($featured) > 0)
 	<div class="row">
@@ -229,7 +244,7 @@
 				@foreach ( $categories as $key => $cat)
 				@if($key > 0 && $key > 6)
 					
-				<a href="{{url("category")}}/{{$cat->slug}}"><h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">{{$cat->title}}</span></h3></a>
+				<a href="{{url("category")}}/{{$cat->slug}}"><h3 style="border-bottom:3px solid #050A30; padding-bottom:5px;"><span style="padding:6px 12px; background:#000080;">{{$cat->title}}</span></h3></a>
 				@endif
 				@endforeach
 
