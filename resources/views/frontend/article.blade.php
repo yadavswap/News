@@ -65,7 +65,7 @@
 					</div>	
 					<div class="share-this">
 						<h4>Share this ....</h4>
-						<div class="sharethis-inline-share-buttons"></div>
+						<div class="sharethis-inline-share-buttons" data-title="Sharing is great!"></div>
 						{{-- <div class="fb-share-button" data-href="{{url('article')}}/{{$data->title}}" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url('article')}}/{{$data->pid}}" ></a></div> --}}
 					{{-- <div class="fb-share-button" data-href="{{url('article')}}/{{$data->title}}" data-layout="button" data-size="small"><a href={{ "whatsapp://send?text=https://theainet.net/newblog/".$data->pid }} ></a></div> --}}
 
