@@ -1,5 +1,8 @@
 @extends('frontend.layout.master')
 @section( 'content')
+<head>
+	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5fd3276a88122800187db5a5&product=inline-share-buttons' async='async'></script>
+</head>
 <script id="dsq-count-scr" src="//http-newskatta-in.disqus.com/count.js" async></script>
 <div class="wrapper">
 	<div id="fb-root"></div>
