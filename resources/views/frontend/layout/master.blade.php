@@ -6,11 +6,7 @@
 <title>{{config('name','NEWSKATTA')}}</title>
 {{-- <title>{{config($data->title)}}</title> --}}
 
-<meta property="og:title" content="Join the best company in the world!" />
-<meta property="og:url" content="http://www.sharethis.com" />
-<meta property="og:image" content="http://sharethis.com/images/logo.jpg" />
-<meta property="og:description" content="ShareThis is its people. It's imperative that we hire smart,innovative people who can work intelligently as we continue to disrupt the very category we created. Come join us!" />
-<meta property="og:site_name" content="ShareThis" />
+
 <link href="{{url('/css/bootstrap.min.css')}}" rel="stylesheet"  />
 <link href="{{url('/css/bootstrap-theme.min.css')}}" rel="stylesheet"  />
 <link href="{{url('/style.css')}}" rel="stylesheet"  />

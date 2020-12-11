@@ -1,13 +1,7 @@
 @extends('frontend.layout.master')
 @section( 'content')
-<head>
-	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5fd3276a88122800187db5a5&product=inline-share-buttons' async='async'></script>
-</head>
-<meta property="og:title" content="Join the best company in the world!" />
-<meta property="og:url" content="http://www.sharethis.com" />
-<meta property="og:image" content="http://sharethis.com/images/logo.jpg" />
-<meta property="og:description" content="ShareThis is its people. It's imperative that we hire smart,innovative people who can work intelligently as we continue to disrupt the very category we created. Come join us!" />
-<meta property="og:site_name" content="ShareThis" />
+
+
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5fd3276a88122800187db5a5&product=inline-share-buttons' async='async'></script>
 
 <script id="dsq-count-scr" src="//http-newskatta-in.disqus.com/count.js" async></script>
