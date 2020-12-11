@@ -5,7 +5,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-10 title">
-			<h1><i class="fa fa-bars"></i> Add New Post</h1>
+			<h1><i class="fa fa-bars"></i> Edit Post</h1>
 		</div>
 		<div class="col-sm-12 ">
 			@if(Session::has('message'))
@@ -20,7 +20,7 @@
 
 		<div class="col-sm-12">
 			<div class="row">
-            <form method="post" action="{{url('updatepost')}}/{{$data->pid}}" enctype="multipart/form-data">
+            <form method="post" action="{{url('updatepost')}}/{{$data->pid}}" >
 				{{ csrf_field ()}}
             <input type="hidden" name="tbl" value="{{encrypt('posts')}}"/>
             <input type="hidden" name="pid" value="{{$data->pid}}"/>
@@ -34,17 +34,33 @@
 							<input type="text" name="slug" class="form-control" placeholder="Enter slug here" id="slug" value="{{$data->title}}">				
 						</div>	
 						<div class="form-group">	
-							<input type="text" name="place" class="form-control" placeholder="Enter place here" id="place">				
+							<input type="text" name="place" class="form-control" placeholder="Enter place here" id="place" value="{{$data->place}}">				
 						</div>	
 						<div class="form-group">
 							<label>Editor</label>
 							<select class="form-control" name="editor">
-								<option>Nadeem Khan</option>
-								<option>Kavita More Nagapure</option>
-								<option>NewsKatta</option>
-								<option>Other</option>
+							<option>{{$data->editor}}</option>
+								@if($data->editor == 'न्यूज कट्टा ब्युरो')
 
-		
+								<option>नदीम खान</option>
+								<option>कविता मोरे/ नागापूरे</option>
+								<option>न्यूज कट्टा</option>
+								@elseif($data->editor == 'नदीम खान')
+								<option>न्यूज कट्टा ब्युरो</option>
+								<option>कविता मोरे/ नागापूरे</option>
+								<option>न्यूज कट्टा</option>
+								@elseif($data->editor == 'कविता मोरे/ नागापूरे')
+
+								<option>न्यूज कट्टा ब्युरो</option>
+								<option>नदीम खान</option>
+								<option>न्यूज कट्टा</option>
+							
+								@elseif($data->editor == 'न्यूज कट्टा')
+								<option>न्यूज कट्टा ब्युरो</option>
+								<option>नदीम खान</option>
+								<option>कविता मोरे/ नागापूरे</option>		
+							
+								@endif
 							</select>
 						</div>						
 						<div class="form-group">		
@@ -63,7 +79,7 @@
 							<p>Publish: Immediately <a href="#">Edit</a></p>
 							<div class="row">
 								<div class="col-sm-12 main-button">
-									<button class="btn btn-primary pull-right" name="status" value="publish">Publish</button>
+									<button class="btn btn-primary pull-right" name="status" value="publish">Edit Publish</button>
 								</div>
 							</div>	
 						</div>
@@ -79,7 +95,9 @@
 						</div>
 						<div class="content featured-image">
 							<h4>Featured Image <span class="pull-right"><i class="fa fa-chevron-down"></i></span></h4><hr>	
-							<input type="file" name="image" id="file" class="inputfile" style="display: none;">
+							<p><img id="output" style="max-width: 100%" /></p>
+							<p>
+							<input type="file" name="image" id="file" accept="image/" onchange="loadFile(event)" style="display: none;" value="{{$data->image}}"> </p>
 							<p><label for="file" style="cursor: pointer;">Set Featured Image</label></p>							
 						</div>
 					</div>

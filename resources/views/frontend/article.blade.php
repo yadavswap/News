@@ -55,18 +55,20 @@
 					</div>	
 					<div class="share-this">
 						<h4>Share this ....</h4>
-					<div class="fb-share-button" data-href="{{url('article')}}/{{$data->slug}}" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url('article')}}/{{$data->pid}}" ></a></div>
-					<div class="whatsapp-share-button" data-href="{{url('article')}}/{{$data->slug}}" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url('article')}}/{{$data->pid}}" ></a></div>
+						<div class="sharethis-inline-share-buttons"></div>
+					{{-- <div class="fb-share-button" data-href="{{url('article')}}/{{$data->title}}" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url('article')}}/{{$data->pid}}" ></a></div> --}}
+					{{-- <div class="fb-share-button" data-href="{{url('article')}}/{{$data->title}}" data-layout="button" data-size="small"><a href={{ "whatsapp://send?text=https://theainet.net/newblog/".$data->pid }} ></a></div> --}}
 
 						<div class="col-md-12">
 							{{--  <a href={{ "whatsapp://send?text=https://theainet.net/newblog/" }} ><i class="fa fa-whatsapp" aria-hidden="true"></i></a>  --}}
-							<div class="fb-share-button" data-href="{{url('article')}}/{{$data->slug}}" data-layout="button" data-size="small"></div>
+							{{-- <div class="fb-share-button" data-href="{{url('article')}}/{{$data->slug}}" data-layout="button" data-size="small"></div> --}}
 						
 						<span class="tweet-btn">
-								<a class="twitter-share-button"
+								{{-- <a class="twitter-share-button"
 								href="https://twitter.com/intent/tweet"
 								data-size="small">
-								Tweet</a>
+								Tweet</a> --}}
+								{{-- <a class="whatsapp-share-button" data-size="small" href={{ "whatsapp://send?text=http://newskatta.in/article/".$data->pid }} >Whatsapp</a> --}}
 						</span>
 						{{-- <span class="whatsapp-btn">
 							<a class="whatsapp-share-button"
