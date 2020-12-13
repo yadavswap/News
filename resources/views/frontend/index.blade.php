@@ -53,7 +53,7 @@
     	<div class="col-md-8">
         <div class="col-md-12" style="border:1px solid #ccc; padding:15px 15px 30px 0px;">
         	<div class="col-md-12">
-        		<h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">NEWS</span></h3>
+        		<h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">HEADLINES</span></h3>
         	</div>
         	<div class="col-md-6">
 			@foreach($general as $key => $g)
@@ -86,7 +86,7 @@
 
             </div>
         </div>
-        
+{{--          
 			<div class="col-md-12 image-gallery" style="border:1px solid #ccc; padding:15px 15px 30px 15px; margin-top:30px; margin-bottom:30px;">
 			
 					
@@ -95,13 +95,13 @@
 				<a href="{{url('article')}}/{{$g->pid}}"><img src="{{url('/posts')}}/{{$b->image}}" /></a>
 				@endforeach
 
-		</div>
+		</div>  --}}
         
         <div class="row">
         	<div class="col-md-6">
             <div class="col-md-12" style="border:1px solid #ccc; padding-bottom:30px;">
             	<div class="col-md-12" style="border-bottom:1px solid #ccc; padding:20px 10px; margin-bottom:10px;">
-				<h3 style="border-bottom:3px solid #b952c8; padding-bottom:5px;"><span style="padding:6px 12px; background:#b952c8;">TECHNOLOGY</span></h3>
+				<h3 style="border-bottom:3px solid #b952c8; padding-bottom:5px;"><span style="padding:6px 12px; background:#b952c8;">राजकीय कट्टा</span></h3>
 				@foreach($tech as $key => $t)
 				@if($key == 0)
 
@@ -133,7 +133,7 @@
         	<div class="col-md-6">
             <div class="col-md-12" style="border:1px solid #ccc; padding-bottom:30px;">
             	<div class="col-md-12" style="border-bottom:1px solid #ccc; padding:20px 10px; margin-bottom:10px;">
-				<h3 style="border-bottom:3px solid #d95757; padding-bottom:5px;"><span style="padding:6px 12px; background:#d95757;">SPORTS</span></h3>
+				<h3 style="border-bottom:3px solid #d95757; padding-bottom:5px;"><span style="padding:6px 12px; background:#d95757;">क्राईम कट्टा</span></h3>
 				@foreach($sport as $key => $s)
 				@if($key == 0)
 				<a href="{{url('article')}}/{{$s->pid}}"><img src="{{url('/posts')}}/{{$s->image}}" width="100%" style="margin-bottom:15px;" /></a>
@@ -163,7 +163,7 @@
         <div class="col-md-12">
         	<div class="col-md-12" style="border:1px solid #ccc; padding:15px 15px 30px 0px; margin-top:30px;">
 			<div class="col-md-12">
-            <h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">HEALTH</span></h3>
+            <h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">थोडक्यात!</span></h3>
             </div>
         	<div class="col-md-6">
 				@foreach($health as $key => $h)
@@ -197,7 +197,7 @@
 			<div class="col-md-12 image-gallery" style="border:1px solid #ccc; padding:15px 15px 30px 15px; margin-top:30px; margin-bottom:30px;">
 			
 					
-    	    	<h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">Travel</span></h3>
+    	    	<h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">	महाराष्ट्र</span></h3>
 				@foreach($travel->take(4) as $key => $t)
 				<a href="{{url('article')}}/{{$t->pid}}"><img src="{{url('/posts')}}/{{$t->image}}" /></a>
 				@endforeach
@@ -206,7 +206,7 @@
         
         <div class="col-md-12">
         <div class="col-md-12" style="border:1px solid #ccc; padding:15px 15px 30px 15px; margin-top:30px;">
-        	<h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">ENTERTAINMENT</span></h3>
+        	<h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">आपला जिल्हा</span></h3>
 			@foreach($enter->take(3) as $key => $e)
 
 			<div class="row" style="margin-bottom:30px;">
@@ -240,7 +240,7 @@
 			  </div>
  			{{-- STOP MENU --}}
 			<div class="col-md-12" style="border:1px solid #ccc; padding:15px;">
-			<h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">EDUCATION</span></h3>
+			<h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">शिक्षण कट्टा</span></h3>
 			@foreach($edu as $key => $edu)
 			@if( $key > 0 && $key < 6 )
 			<div class="col-md-12" style="border-bottom:1px solid #ccc; padding-bottom:10px; margin-bottom:10px;">
@@ -262,7 +262,7 @@
           
           <div class="col-md-12" style="border:1px solid #ccc; padding:15px 15px 60px 15px; margin-top:30px;">
           	<div class="col-md-12" style="border-bottom:1px solid #ccc; padding:0px 10px 20px 10px; margin-bottom:10px;">
-           		<h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">POlITICS</span></h3>
+           		<h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">आरोग्य कट्टा</span></h3>
 				 @foreach($pol as $key => $p)
 				 @if($key == 0)
 
@@ -307,7 +307,7 @@
           
          <div class="col-md-12" style="border:1px solid #ccc; padding:15px 15px 7px 15px; margin-top:30px;">
           	<div class="col-md-12" style="border-bottom:1px solid #ccc; padding:0px 10px 20px 10px; margin-bottom:10px;">
-            <h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">STYLE</span></h3>
+            <h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">सांस्कृतिक कट्टा</span></h3>
 			@foreach($pol as $key => $p)
 			@if($key == 0)
 			<img href="{{url('article')}}/{{$p->pid}}" src="{{url('/posts')}}/{{$p->image}}" width="100%" />

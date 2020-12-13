@@ -36,25 +36,26 @@ class frontendController extends Controller
 
     public function index(){
 
-        $featured = DB::table('posts')->where('category_id' ,'LIKE','%22%')->orderby('pid','DESC')->get();
+        $featured = DB::table('posts')->where('category_id' ,'LIKE','%56%')->orderby('pid','DESC')->get();
         $general = DB::table('posts')->where('category_id' ,'LIKE','%24%')->orderby('pid','DESC')->get();
         $business = DB::table('posts')->where('category_id' ,'LIKE','%20%')->orderby('pid','DESC')->get();
-        $tech = DB::table('posts')->where('category_id' ,'LIKE','%25%')->orderby('pid','DESC')->get();
-        $sport = DB::table('posts')->where('category_id' ,'LIKE','%26%')->orderby('pid','DESC')->get();
-        $health = DB::table('posts')->where('category_id' ,'LIKE','%23%')->orderby('pid','DESC')->get();
-        $travel = DB::table('posts')->where('category_id' ,'LIKE','%28%')->orderby('pid','DESC')->get();
-        $enter = DB::table('posts')->where('category_id' ,'LIKE','%27%')->orderby('pid','DESC')->get();
-        $edu = DB::table('posts')->where('category_id' ,'LIKE','%15%')->orderby('pid','DESC')->get();
-        $pol = DB::table('posts')->where('category_id' ,'LIKE','%29%')->orderby('pid','DESC')->get();
-        $style = DB::table('posts')->where('category_id' ,'LIKE','%30%')->orderby('pid','DESC')->get();
+        $tech = DB::table('posts')->where('category_id' ,'LIKE','%37%')->orderby('pid','DESC')->get();
+        $sport = DB::table('posts')->where('category_id' ,'LIKE','%38%')->orderby('pid','DESC')->get();
+        $health = DB::table('posts')->where('category_id' ,'LIKE','%55%')->orderby('pid','DESC')->get();
+        $travel = DB::table('posts')->where('category_id' ,'LIKE','%34%')->orderby('pid','DESC')->get();
+        $enter = DB::table('posts')->where('category_id' ,'LIKE','%36%')->orderby('pid','DESC')->get();
+        $edu = DB::table('posts')->where('category_id' ,'LIKE','%54%')->orderby('pid','DESC')->get();
+        $pol = DB::table('posts')->where('category_id' ,'LIKE','%41%')->orderby('pid','DESC')->get();
+        $style = DB::table('posts')->where('category_id' ,'LIKE','%46%')->orderby('pid','DESC')->get();
         $new = DB::table('posts')->where('category_id' ,'LIKE','%32%')->orderby('pid','DESC')->get();
+        $lastnews = DB::table('posts')->where('status','publish')->orderby('pid','DESC')->first();
 
 
 
 
 
         return view('frontend.index',['featured'=>$featured,'general'=>$general,'business'=>$business,'tech'=>$tech,'sport'=>$sport,'health'=>$health,'travel'=>$travel,'enter'=>$enter,'edu'=>$edu
-        ,'pol'=>$pol,'style'=>$style,'new'=>$new]);
+        ,'pol'=>$pol,'style'=>$style,'new'=>$new,'lastnews'=>$lastnews]);
     }
 
     public function category($slug){

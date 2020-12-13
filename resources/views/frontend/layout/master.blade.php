@@ -48,10 +48,11 @@
 
     @if($setting->image)
 
-    <img src="{{url('/settings')}}/{{$setting->image}}" width="50%" class="center"/>
+    <img src="{{url('/settings')}}/{{$setting->image}}" width="70%" class="center"/>
     @endif
-    <div id="google_translate_element"></div>
+    <h4>न्यूज कट्टा को अपनी भाषा मे पढे</h4>
 
+    <div id="google_translate_element"></div>
     </div>
     
     <div class="col-md-8">
@@ -78,9 +79,9 @@
             
     		<div class="collapse navbar-collapse" id="mynavbar">
     			<ul class="nav nav-justified">
-                    <li><a href="#" class="active"><span class="glyphicon glyphicon-home"></span></a></li>
+                    <li><a href=/ class="active"><span class="glyphicon glyphicon-home"></span></a></li>
                     @foreach($categories as $key=> $cat)
-                    @if($key < 5 )
+                    @if($key < 6 )
                         
                     <li><a href="{{url("category")}}/{{$cat->slug}}" class="text-uppercase" >{{$cat->title}}</a></li>
                     @endif
