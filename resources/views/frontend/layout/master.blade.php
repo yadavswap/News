@@ -48,7 +48,7 @@
 
     @if($setting->image)
 
-    <img src="{{url('/settings')}}/{{$setting->image}}" width="70%" class="center"/>
+    <img src="{{url('/settings')}}/{{$setting->image}}" width="50%" class="center"/>
     @endif
     <h4>न्यूज कट्टा को अपनी भाषा मे पढे</h4>
 
