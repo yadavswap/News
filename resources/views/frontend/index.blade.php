@@ -231,9 +231,9 @@
 			{{-- START MENU --}}
 			<div class="col-md-12" style="border:1px solid #ccc; padding:15px;">
 				@foreach ( $categories as $key => $cat)
-				@if($key > 0 && $key > 6)
+				@if($key > 0 && $key > 5)
 					
-				<a href="{{url("category")}}/{{$cat->slug}}"><h3 style="border-bottom:3px solid #050A30; padding-bottom:5px;"><span style="padding:6px 12px; background:#000080;">{{$cat->title}}</span></h3></a>
+				<a href="{{url("category")}}/{{$cat->slug}}"><h3 style="border-bottom:3px solid #000080; padding-bottom:5px;"><span style="padding:6px 12px; background:#000080;">{{$cat->title}}</span></h3></a>
 				@endif
 				@endforeach
 

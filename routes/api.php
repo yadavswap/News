@@ -19,4 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // Route::apiResource('/category','CategoryController');
 // Route::apiResource('/category/{id}','CategoryController');
-
+Route::apiResource('/cat','CategoryController');
+Route::group(['prefix'=>'products'],function(){
+	Route::apiResource('/{product}/reviews','ReviewController');
+});
