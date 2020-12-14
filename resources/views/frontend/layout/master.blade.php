@@ -48,7 +48,7 @@
 
     @if($setting->image)
 
-    <img src="{{url('/settings')}}/{{$setting->image}}"  class="center"/>
+    <img src="{{url('/settings')}}/{{$setting->image}}"  class="center" width="50%"/>
     @endif
     <h4>न्यूज कट्टा को अपनी भाषा मे पढे</h4>
 
@@ -60,7 +60,7 @@
 
         @if($key < 1)
 
-         <img  src="{{url('/posts')}}/{{$ads->image}}" class="left"  width="50%" /> 
+         <img  src="{{url('/posts')}}/{{$ads->image}}" class="left" width="50%"  /> 
          @endif
         @endforeach
     </div>

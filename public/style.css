@@ -233,8 +233,8 @@ a{
 }
 .left{
 	display: block;
-	margin-right: 100px;
-	margin-left: auto;
+	margin-right: auto;
+	margin-right: 1000px;
 }
 .share-this a {
     display: inline-block;
