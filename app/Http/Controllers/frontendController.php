@@ -11,6 +11,7 @@ class frontendController extends Controller
         $categories = DB::table('categories')->where('status' ,'on')->get();
         $setting = DB::table('settings')->first();
         $pages = DB::table('pages')->where('status' ,'publish')->get();
+        $ads = DB::table('ads')->orderby('aid','DESC')->get();
 
         if($setting){
             $setting->social = explode(',',$setting->social);
@@ -18,7 +19,6 @@ class frontendController extends Controller
                 $icon = explode('.',$social);
                 // $data[$parts[0]] = isset($parts[1]) ? $parts[1] : null;
                 $lastnews = DB::table('posts')->where('status','publish')->orderby('pid','DESC')->first();
-
             } 
         }
       
@@ -27,6 +27,7 @@ class frontendController extends Controller
             'setting' => $setting,
             'lastnews'=>$lastnews,
             'pages'=>$pages,
+            'ads'=>$ads,
              ]);
 
         // return view('frontend.layout.master', compact('categories'));
@@ -60,7 +61,7 @@ class frontendController extends Controller
 
     public function category($slug){
         $cat = DB::table('categories')->where('slug',$slug)->first();
-        $posts = DB::table('posts')->where('category_id','LIKE','%'.$cat->cid.'%')->get();
+        $posts = DB::table('posts')->where('category_id','LIKE','%'.$cat->cid.'%')->orderby('pid','DESC')->get()->all();
         // $releated = DB::table('posts')->where('category_id','LIKE','%'.$data->category_id.'%')->get();
 
         $latest = DB::table('posts')->where('status','publish')->orderby('pid','DESC')->get();

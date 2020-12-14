@@ -44,20 +44,25 @@
       </script>
       
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-	<div class="col-md-4 name">
+	<div class="col-md-8">
 
     @if($setting->image)
 
-    <img src="{{url('/settings')}}/{{$setting->image}}" width="50%" class="center"/>
+    <img src="{{url('/settings')}}/{{$setting->image}}"  class="center"/>
     @endif
     <h4>न्यूज कट्टा को अपनी भाषा मे पढे</h4>
 
     <div id="google_translate_element"></div>
     </div>
     
-    <div class="col-md-8">
-        {{--  <img src="images/final-news-site_06.gif" width="100%" />  --}}
-        
+    <div class="col-md-4 name">
+        @foreach($ads as $key=>$ads)
+
+        @if($key < 1)
+
+         <img  src="{{url('/posts')}}/{{$ads->image}}" width="80%"  /> 
+         @endif
+        @endforeach
     </div>
     
 </div>
@@ -79,7 +84,7 @@
             
     		<div class="collapse navbar-collapse" id="mynavbar">
     			<ul class="nav nav-justified">
-                    <li><a href=/ class="active"><span class="glyphicon glyphicon-home"></span></a></li>
+                    <li><a href={{url('/')}} class="active"><span class="glyphicon glyphicon-home"></span></a></li>
                     @foreach($categories as $key=> $cat)
                     @if($key < 6 )
                         
