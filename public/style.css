@@ -231,6 +231,11 @@ a{
 	margin-left: 500px;
 	margin-right: auto;
 }
+.left{
+	display: block;
+	margin-right: 100px;
+	margin-left: auto;
+}
 .share-this a {
     display: inline-block;
     color: #303030;

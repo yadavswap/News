@@ -44,7 +44,7 @@
       </script>
       
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-	<div class="col-md-8">
+	<div class="col-md-8 name">
 
     @if($setting->image)
 
@@ -55,12 +55,12 @@
     <div id="google_translate_element"></div>
     </div>
     
-    <div class="col-md-4 name">
+    <div class="col-md-4">
         @foreach($ads as $key=>$ads)
 
         @if($key < 1)
 
-         <img  src="{{url('/posts')}}/{{$ads->image}}" width="80%"  /> 
+         <img  src="{{url('/posts')}}/{{$ads->image}}" class="left"  width="50%" /> 
          @endif
         @endforeach
     </div>
