@@ -22,7 +22,7 @@
 
 		<div class="col-sm-12">
 			<div class="row">
-			<form method="post" action="{{url('addads')}}" >
+			<form method="post" action="{{url('addads')}}"   enctype="multipart/form-data">
 				{{ csrf_field ()}}
 			<input type="hidden" name="tbl" value="{{encrypt('ads')}}"/>
 					<div class="col-sm-9">

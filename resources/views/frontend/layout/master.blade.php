@@ -60,7 +60,7 @@
 
         @if($key < 1)
 
-         <img  src="{{url('/posts')}}/{{$ads->image}}" class="left" width="50%"  /> 
+         <img  src="{{url('/ads')}}/{{$ads->image}}" class="left" width="80%"  /> 
          @endif
         @endforeach
     </div>

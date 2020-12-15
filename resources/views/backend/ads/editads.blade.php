@@ -68,19 +68,25 @@
 							</div>	
 							
 					
-							
+							{{-- <div class="content featured-image">
+								<h4>Featured Image <span class="pull-right"><i class="fa fa-chevron-down"></i></span></h4><hr>	
+								<p><img id="output" style="max-width: 100%" /></p>
+								<p>
+								<input type="file" name="image" id="file" accept="image/" onchange="loadFile(event)" style="display: none;" value="{{$data->image}}"> </p>
+								<p><label for="file" style="cursor: pointer;">Set Featured Image</label></p>							
+							</div> --}}
 						
 							<div class="form-group content featured-image">
 								<h4>Ads Image <span class="pull-right"><i class="fa fa-chevron-down"></i></span></h4><hr>	
 								@if($data->image != '')
 									<p><img id="output" src="{{url('ads')}}/{{$data->image}}" style="max-width: 100%" /></p>
 										<p>
-										<input type="file" name="image" id="file" accept="image/" onchange="loadFile(event)" style="display: none;"></p>
+										<input type="file" name="image" id="file" accept="image/" onchange="loadFile(event)" style="display: none;" value="{{$data->image}}"></p>
 										<p><label for="file" style="cursor: pointer;">Upload Image</label></p>			
 								@else	
 								<p><img id="output"  style="max-width: 100%" /></p>
 										<p>
-										<input type="file" name="image" id="file" accept="image/*" onchange="loadFile(event)" style="display: none;"></p>
+										<input type="file" name="image" id="file" accept="image/" onchange="loadFile(event)" style="display: none;" value="{{$data->image}}"></p>
 										<p><label for="file" style="cursor: pointer;">Upload Image</label></p>				
 									@endif
 									</div>
