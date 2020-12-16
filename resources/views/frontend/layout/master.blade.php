@@ -50,9 +50,9 @@
 
     <img src="{{url('/settings')}}/{{$setting->image}}"  class="center" width="50%"/>
     @endif
-    <h4>न्यूज कट्टा को अपनी भाषा मे पढे</h4>
+    <h4 class="center">न्यूज कट्टा को अपनी भाषा मे पढे</h4>
 
-    <div id="google_translate_element"></div>
+    <div id="google_translate_element" class="center"></div>
     </div>
     
     <div class="col-md-4">

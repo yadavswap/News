@@ -31,11 +31,11 @@
 			<div class="col-md-8">
 				<div class="col-md-12" style="padding:15px 15px 0px 0px;">				
 					<div class="col-md-12">
-						<div class="text-left view-count ">
+						{{-- <div class="text-left view-count ">
 						<h4>By {{$data->editor}}</h4><br/>
 						<h4> {{$data->place}}</h4>
 
-						</div>
+						</div> --}}
 
 					
 						<div class="text-right view-count">
@@ -52,6 +52,8 @@
 						<div class="text-left view-count ">
 
 						<h3>{{$data->title}}</h3>
+						<h4>By {{$data->editor}}</h4><br/>
+						<h4> {{$data->place}}</h4>
 						</div>
 
 						<img href="{{url('article')}}/{{$data->slug}}" src="{{url('/posts')}}/{{$data->image}}"  width="100%" style="margin-bottom:15px;" />
@@ -111,7 +113,7 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 					</div>
-						<div class="col-md-12 also" >
+						{{-- <div class="col-md-12 also" >
 							<h3>You May Also Like</h3>
 
 						</div>			
@@ -123,7 +125,7 @@
 							<p><a href="{{url('article')}}/{{$r->pid}}">{{$r->title}}</a></p>
 
 						</div>
-						@endforeach
+						@endforeach --}}
 
 
 					

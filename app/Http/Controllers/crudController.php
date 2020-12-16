@@ -41,7 +41,9 @@ class crudController extends Controller
         unset($data['tbl']);
         $data['updated_at'] = date('Y-m-d H:i:s');
 
-
+        if(Input::hasFile('image')){
+            $data['image'] = $this->uploadimage($tbl,$data['image']);
+        }
         if(Input::has('category_id')){
             $data['category_id'] = implode(',',$data['category_id']);
         }

@@ -20,7 +20,7 @@
 
 		<div class="col-sm-12">
 			<div class="row">
-            <form method="post" action="{{url('updatepost')}}/{{$data->pid}}" >
+            <form method="post" action="{{url('updatepost')}}/{{$data->pid}}" enctype="multipart/form-data">
 				{{ csrf_field ()}}
             <input type="hidden" name="tbl" value="{{encrypt('posts')}}"/>
             <input type="hidden" name="pid" value="{{$data->pid}}"/>
@@ -93,11 +93,18 @@
 
 		
 						</div>
-						<div class="content featured-image">
+						{{-- <div class="content featured-image">
 							<h4>Featured Image <span class="pull-right"><i class="fa fa-chevron-down"></i></span></h4><hr>	
 							<p><img id="output" style="max-width: 100%" /></p>
 							<p>
 							<input type="file" name="image" id="file" accept="image/" onchange="loadFile(event)" style="display: none;" value="{{$data->image}}"> </p>
+							<p><label for="file" style="cursor: pointer;">Set Featured Image</label></p>							
+						</div> --}}
+						<div class="content featured-image">
+							<h4>Featured Image <span class="pull-right"><i class="fa fa-chevron-down"></i></span></h4><hr>	
+							<p><img id="output" style="max-width: 100%" /></p>
+							<p>
+							<input type="file" name="image" id="file" accept="image/" onchange="loadFile(event)" style="display: none;"></p>
 							<p><label for="file" style="cursor: pointer;">Set Featured Image</label></p>							
 						</div>
 					</div>
