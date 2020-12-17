@@ -106,7 +106,7 @@
 				@if($key == 0)
 
 				<a href="{{url('article')}}/{{$t->pid}}"><img src="{{url('/posts')}}/{{$t->image}}" width="100%" style="margin-bottom:15px;" /></a>
-				<a href="{{url('article')}}/{{$t->pid}}"><a href="{{url('article')}}/{{$t->pid}}"><h1>{{$g->title}}</h1> <a href="{{url('article')}}/{{$t->pid}}"><h2> Read more &raquo;</h2> </a>
+				<a href="{{url('article')}}/{{$t->pid}}"><a href="{{url('article')}}/{{$t->pid}}"><h1>{{$t->title}}</h1> <a href="{{url('article')}}/{{$t->pid}}"><h2> Read more &raquo;</h2> </a>
 				@endif
 				@endforeach
 
