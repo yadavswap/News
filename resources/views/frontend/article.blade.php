@@ -51,7 +51,7 @@
 						</div>
 						<div class="text-left view-count ">
 
-						<h3>{{$data->title}}</h3>
+						<h1>{{$data->title}}</h1>
 						<h4>By {{$data->editor}}</h4><br/>
 						<h4> {{$data->place}}</h4>
 						</div>
@@ -147,7 +147,7 @@
 						</div>
 						<div class="col-md-8">
 							<div class="row" style="padding-left:10px;">
-								<h4><a href="{{url('article')}}/{{$l->pid}}">{{$l->title}}</a></h4>
+								<h2><a href="{{url('article')}}/{{$l->pid}}">{{$l->title}}</a></h2>
 							</div>
 						</div>
 					</div>
