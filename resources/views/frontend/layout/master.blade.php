@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>{{config('name','NEWSKATTA')}}</title>
 {{-- <title>{{config($data->title)}}</title> --}}
-
+<script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <link href="{{url('/css/bootstrap.min.css')}}" rel="stylesheet"  />
 <link href="{{url('/css/bootstrap-theme.min.css')}}" rel="stylesheet"  />
