@@ -13,6 +13,7 @@
 
 Route::get('contact', 'frontendController@contact');
 
+Route::get('/new', 'frontendController@new')->name('index');
 
 Route::get('/', 'frontendController@index')->name('index');
 Route::get('article/{id}', 'frontendController@article')->name('article');
