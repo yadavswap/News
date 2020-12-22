@@ -1,0 +1,36 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.tarunbharat.net	TRUE	/	FALSE	1999999999	__cfduid	db0815e5746d6f4f2b436ce4cd97a62db1608380178
+www.tarunbharat.net	TRUE	/	FALSE	1999999999	SameSite	Lax
+.ionicframework.com	TRUE	/	FALSE	1999999999	__cfduid	dbfbeb986ff24c9b9adb76a939429929b1608380200
+code.ionicframework.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.onesignal.com	TRUE	/	FALSE	1999999999	__cfduid	dbf963948ddc08d2316b8518ccb22431f1608380205
+cdn.onesignal.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.facebook.com	TRUE	/	FALSE	1999999999	sb	L-_dX2LEOaXGkkqGCFRfuqTt
+.youtube.com	TRUE	/	FALSE	1999999999	YSC	ELzxC1xI-t0
+.youtube.com	TRUE	/	FALSE	1999999999	VISITOR_INFO1_LIVE	nGz6JUk2MRo
+www.youtube.com	TRUE	/	FALSE	1999999999	SameSite	none
+.google.com	TRUE	/	FALSE	1999999999	NID	205=dQyGvUoVwNIOJ5lCShkF5uNNl5eEM4HHQXXIRkVSxsnmH8COIESNEeRHkAVJZ3Uypr6RzKOTbAdEoOpdtNrgdmZ4QYQ7AwbmEdxOZnLLZKgdO-haD1rhkunXyrXSDxpMKsMIAt1tWJX6G84SvCQ_n_CbDlNU9GtY7GNNqPivyAY
+epaper.tarunbharat.net	TRUE	/	FALSE	1999999999	PHPSESSID	rgug444t86acju1t54nd6d7662
+epaper.tarunbharat.net	TRUE	/	FALSE	1999999999	logged_guest	79e6f21bcba983f75ef31991d65a89b4
+bharatwani.tarunbharat.net	TRUE	/	FALSE	1999999999	PHPSESSID	ao7kp0ionhhnakti0h79c2ub45
+bharatwani.tarunbharat.net	TRUE	/	FALSE	1999999999	logged_guest	66ccf92c3937cb19708db96cc1d38358
+.youtube.com	TRUE	/	FALSE	1999999999	GPS	1
+.cloudflare.com	TRUE	/	FALSE	1999999999	__cfduid	dab39672be8838e99e9b3b6c890a5b0711608380298
+ajax.cloudflare.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.scomponents.net	TRUE	/	FALSE	1999999999	__cfduid	df60cc4c05ff3b64bf587da5a1313bcbe1608380400
+www.scomponents.net	TRUE	/	FALSE	1999999999	SameSite	Lax
+.mahamtb.com	TRUE	/	FALSE	1999999999	__cfduid	da576dce15d51d3c076718d7fa50efb5a1608380472
+www.mahamtb.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.addtoany.com	TRUE	/	FALSE	1999999999	__cfduid	dbb0ffaca406baf21ee958000b4ace0771608380486
+static.addtoany.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.bharatiweb.in	TRUE	/	FALSE	1999999999	__cfduid	d7b653fc0a82cfef6d92c53ecdd78227a1608380494
+demo.bharatiweb.in	TRUE	/	FALSE	1999999999	SameSite	Lax
+.twitter.com	TRUE	/	FALSE	1999999999	personalization_id	v1_iDUszvCXrIo2JrRsUWuEmA=="
+.twitter.com	TRUE	/	FALSE	1999999999	guest_id	v1%3A160838057437450494
+twitter.com	TRUE	/	FALSE	1999999999	SameSite	None
+.sangraha.net	TRUE	/	FALSE	1999999999	__cfduid	d78dcb7b23aaffca222cac2cf38bdebdc1608380945
+sangraha.net	TRUE	/	FALSE	1999999999	SameSite	Lax
+.facebook.com	TRUE	/	FALSE	1999999999	noscript	1
+.facebook.com	TRUE	/	FALSE	1999999999	fr	1XOIWyEKk2jXGpoZh..Bf3e8v.wv.AAA.0.0.Bf3ffS.AWW_Nuc8esg
+

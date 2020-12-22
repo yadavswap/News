@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Karma';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/karma/v11/va9I4kzAzMZRGLBoQeY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/mukta/v7/iJWKBXyXfDDVXbnBrXk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/notosans/v11/o-0IIpQlx3QUlC5A4PNr5TRF.ttf) format('truetype');
+}

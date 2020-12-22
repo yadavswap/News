@@ -41,7 +41,7 @@
 <link rel="preconnect" href="../www.google-analytics.com/index.html">
 
 <link rel="alternate" href="index.html" hreflang="x-default" />
-<link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min1.css">
 
 
 
@@ -49,14 +49,14 @@
 
 
 
-<link rel="stylesheet" type="text/css" href='css/13067.css'>
+<link rel="stylesheet" type="text/css" href='13067.css'>
 
 
-<link rel="stylesheet" type="text/css" href="../cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
-<link rel="stylesheet" type="text/css" href="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="animate.css">
+<link rel="stylesheet" type="text/css" href="carousel.css">
+<link rel="stylesheet" type="text/css" href="owl.carousel1.css">
 
-<link rel="stylesheet" type="text/css" href="../cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.33.0/css/blueimp-gallery.css">
+<link rel="stylesheet" type="text/css" href="blueimp-gallery.css">
 
 
 <script async src="../www.googletagmanager.com/gtag/js4ec0?id=UA-103166355-6" type="acaace00cea21931d30af693-text/javascript"></script>
@@ -140,13 +140,13 @@ GetTodayDate_VFLqHPjKlPZISVlZ("1");
 </div>
 </div>
 <div class="col-md-4"> <div id='wfun-LcbT-higD-iXxw' class='Social-Icons-1-v1  '>
-<a href="../www.facebook.com/TarunBharatNgp.html" class="facebook" target="_blank">
+<a href="#" class="facebook" target="_blank">
 <i class="fa fa-facebook"></i>
 </a>
-<a href="../twitter.com/tarunbharatngp.html" class="twitter" target="_blank">
+<a href="#" class="twitter" target="_blank">
 <i class="fa fa-twitter"></i>
 </a>
-<a href="../www.youtube.com/channel/UCsK3OwnwBtGMiRnVIfkJtUQ.html" class="youtube" target="_blank">
+<a href="#" class="youtube" target="_blank">
 <i class="fa fa-youtube-play"></i>
 </a>
 </div>
@@ -154,10 +154,10 @@ GetTodayDate_VFLqHPjKlPZISVlZ("1");
 </div>
 </div>
 <div class="col-md-4">
-<div id="ggIv-kTVx-KzVs-WSET" class="Special-Facebook-Feed-1-v1 " data-layout="3" data-url="https://www.facebook.com/TarunBharat-239252369447205/" data-hide-cover="false">
+<div id="ggIv-kTVx-KzVs-WSET" class="Special-Facebook-Feed-1-v1 " data-layout="3" data-url="" data-hide-cover="false">
 <div class="feed_icon shadow-lg"><i class="fa fa-facebook"></i></div>
 <div class="feed_close shadow"><i class="fa fa-times"></i></div>
-<div class="feed_container"><iframe src="../www.facebook.com/plugins/like8c4a.html?href=https://www.facebook.com/TarunBharat-239252369447205/&amp;width=350&amp;layout=standard&amp;action=like&amp;size=small&amp;show_faces=true&amp;share=true&amp;height=60&amp;appId" width="350" height="60" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+<div class="feed_container"><iframe src="" width="350" height="60" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
 </div>
 </div>
 </div>
@@ -452,7 +452,7 @@ GetTodayDate_VFLqHPjKlPZISVlZ("1");
 <div class="featured">
 <div class="overlay">
 <div class="content" data-compoitem="y" data-bwplcurrindex="0" data-bwplrepeat="n">
-<img src="Encyc/2020/12/19/Web_2_05_45_27_acci_1.jpg" alt="दुचाकींच्या धडकेत एक ठार, एक गंभीर">
+<img src="{{url('/posts')}}/{{$t->image}}" alt="">
 {{--  <span class="category"><a href="#">अकोला</a></span>  --}}
 <h1><a href="{{url('/posts')}}/{{$f->image}}" class="line-clamp line-clamp-2">{{$t->title}}</a></h1>
 </div>
@@ -493,7 +493,7 @@ GetTodayDate_VFLqHPjKlPZISVlZ("1");
 <div class="featured">
 <div class="overlay">
 <div class="content" data-compoitem="y" data-bwplcurrindex="0" data-bwplrepeat="n">
-<img src="Encyc/2020/12/19/Web_2_05_40_21_isro-new_1.jpg" alt="इस्त्रोच्या मोहिमेत गोदरेज एअरोस्पेसचे सहकार्य">
+<img src="{{url('/posts')}}/{{$t->image}}" alt="">
 <span class="category"><a href="#">महाराष्ट्र</a></span>
 @foreach($travel as $key => $t)
 @if($key == 0)
@@ -537,7 +537,7 @@ GetTodayDate_VFLqHPjKlPZISVlZ("1");
 <div class="featured">
 <div class="overlay">
 <div class="content" data-compoitem="y" data-bwplcurrindex="0" data-bwplrepeat="n">
-<img src="Encyc/2020/12/19/Web_2_05_27_55_food-business_1.jpg" alt="पुढील वर्षांत अन्न उद्योगात 10 लाख रोजगारांची संधी">
+<img src="{{url('/posts')}}/{{$t->image}}" alt="">
 <span class="category"><a href="#">राष्ट्रीय</a></span>
 @foreach($travel as $key => $t)
 @if($key == 0)
@@ -576,7 +576,7 @@ GetTodayDate_VFLqHPjKlPZISVlZ("1");
 <div class="featured">
 <div class="overlay">
 <div class="content" data-compoitem="y" data-bwplcurrindex="0" data-bwplrepeat="n">
-<img src="Encyc/2020/12/19/Web_2_05_31_49_sputnik-rashia_1.jpg" alt="रशियाच्या स्पुटनिक व्ही लसीचे भारतात होणार उत्पादन">
+<img src="{{url('/posts')}}/{{$t->image}}" alt="">
 <span class="category"><a href="#">आंतरराष्ट्रीय</a></span>
 @foreach($travel as $key => $t)
 @if($key == 0)
@@ -607,7 +607,7 @@ GetTodayDate_VFLqHPjKlPZISVlZ("1");
 <div class="featured">
 <div class="overlay">
 <div class="content" data-compoitem="y" data-bwplcurrindex="0" data-bwplrepeat="n">
-<img src="Encyc/2020/12/19/Web_2_11_40_19_A_1.jpg" alt="aus vs ind: भारतीय संघ 'तू चाल मै आया'">
+<img src="{{url('/posts')}}/{{$t->image}}" alt="">
 <span class="category"><a href="#">क्रीडा</a></span>
 @foreach($travel as $key => $t)
 @if($key == 0)
@@ -725,7 +725,7 @@ GetTodayDate_VFLqHPjKlPZISVlZ("1");
 <div class="col-md-12 NewClass"> <div id="IkeM-RGzY-enPl-knTT" class="Text-Custom-Text-1-v1"><div class="grid"><div class="line"></div><div class="text"><span><a href="Lekh.html">आपला जिल्हा</a></span><a href="Lekh.html" class='link'></a></div><div class="line"></div></div></div>
 <div id="RZvg-GwhQ-RxFD-DhFj" class="Img-Title-Intro-Grid-3-v1 ">
 <div class="snip1253 S8ConfigCompHeight" data-compoitem="y" data-bwplcurrindex="0" data-bwplrepeat="n">
-<div class="image"><img src="Encyc/2020/12/18/Web_2_07_50_31_court_1.jpg" alt="न्याय ‘वि’संगत...!" class="img-responsive S8ConfigImgPercentArea"></div>
+<div class="image"><img src="{{url('/posts')}}/{{$t->image}}" alt="" class="img-responsive S8ConfigImgPercentArea"></div>
 <div class="figcaption">
 <div class="date S8Configbackcolor"><span class="day">19</span><span class="month">Dec</span></div>
 @foreach($travel as $key => $t)
@@ -937,7 +937,7 @@ GetTodayDate_VFLqHPjKlPZISVlZ("1");
 <div class="items_container owl-carousel owl-theme"><div class="item" data-compoitem="y" data-bwplcurrindex="0" data-bwplrepeat="y">
 <div class="image">
 <span class="category"><a href="Tourism.html">पर्यटन</a></span>
-<img src="Encyc/2020/12/15/Web_2_12_25_31_dubai_1.jpg" alt="रंगरंगिली दुबई...">
+<img src="{{url('/posts')}}/{{$t->image}}" alt="">
 </div>
 {{-- <div class="content">
 <span class="category"><a href="Tourism.html">पर्यटन</a></span>
@@ -1049,7 +1049,7 @@ GetTodayDate_VFLqHPjKlPZISVlZ("1");
 <div class="col-md-12 NewClass">
 <div id="PKeI-CpKv-XHcT-oRPv" class="Img-Title-Intro-Grid-3-v1 ">
 <div class="snip1253 S8ConfigCompHeight" data-compoitem="y" data-bwplcurrindex="0" data-bwplrepeat="n">
-<div class="image"><img src="Encyc/2020/12/15/Web_2_12_41_47_s_1.jpg" alt="नवभारताचे संस्थापक सरदार वल्लभभाई पटेल!" class="img-responsive S8ConfigImgPercentArea"></div>
+<div class="image"><img src="{{url('/posts')}}/{{$t->image}}" alt="" class="img-responsive S8ConfigImgPercentArea"></div>
 <div class="figcaption">
 @foreach($enter->take(3) as $key => $e)
 
@@ -2579,7 +2579,7 @@ fit: true
 
 });
 </script>
-<script src="../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="acaace00cea21931d30af693-|49" defer=""></script></body>
+<script src="rocket-loader.min.js" data-cf-settings="acaace00cea21931d30af693-|49" defer=""></script></body>
 
 <!-- Mirrored from www.tarunbharat.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Dec 2020 12:18:13 GMT -->
 </html>
