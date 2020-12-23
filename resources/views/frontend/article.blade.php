@@ -91,7 +91,7 @@
 					</span> --}}
 						
 					{{-- <div class="sharethis-inline-share-buttons"></div> --}}
-					<div class="sharethis-inline-share-buttons" data-url="http://newskatta.in" data-title="{{$data->title}}"></div>
+					<div class="sharethis-inline-share-buttons" data-url="{{url('article')}}/{{$data->pid}}" data-title="{{$data->title}}"></div>
 
 <script>
     /**
