@@ -2,7 +2,7 @@
 <!DOCTYPE html >
 
 <head>
-    <meta property="og:title" content="{{$data->title}}">
+    {{-- <meta property="og:title" content="{{$data->title}}"> --}}
 
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fe2e4577c936200185ee863&product=inline-share-buttons" async="async"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
