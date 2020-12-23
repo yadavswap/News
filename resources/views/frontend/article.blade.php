@@ -1,5 +1,12 @@
 @extends('frontend.layout.master')
 @section( 'content')
+@section('title', $data->title)
+<meta property="og:title" content="Join the best company in the world!" />
+<meta property="og:url" content="http://www.sharethis.com" />
+<meta property="og:image" content="http://sharethis.com/images/logo.jpg" />
+<meta property="og:description" content="ShareThis is its people. It's imperative that we hire smart,innovative people who can work intelligently as we continue to disrupt the very category we created. Come join us!" />
+<meta property="og:site_name" content="ShareThis" />
+
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fe2e4577c936200185ee863&product=inline-share-buttons" async="async"></script>
 
 <meta property="og:title" content="{{$data->title}}">
