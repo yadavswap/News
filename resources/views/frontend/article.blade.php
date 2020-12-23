@@ -1,7 +1,7 @@
 @extends('frontend.layout.master')
 @section( 'content')
 @section('title', $data->title)
-@section('image', $data->image)
+{{-- @section('image', ('/posts')/$data->image) --}}
 
 
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fe2e4577c936200185ee863&product=inline-share-buttons" async="async"></script>
@@ -91,7 +91,7 @@
 					</span> --}}
 						
 					{{-- <div class="sharethis-inline-share-buttons"></div> --}}
-					<div class="sharethis-inline-share-buttons" data-url="{{url('article')}}/{{$data->pid}}" data-title="{{$data->title}}" data-image="{{$data->image}}"
+					<div class="sharethis-inline-share-buttons" data-url="{{url('article')}}/{{$data->pid}}" data-title="{{$data->title}}" data-image="http://newskatta.in/posts/2012186335520121721032news%20%20katta.png"
 						></div>
 
 <script>
