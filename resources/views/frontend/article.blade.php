@@ -91,7 +91,7 @@
 					</span> --}}
 						
 					{{-- <div class="sharethis-inline-share-buttons"></div> --}}
-					<div class="sharethis-inline-share-buttons" data-url="{{url('article')}}/{{$data->pid}}" data-title="{{$data->title}}" data-image="{{url('/posts')}}/{{$data->image}}"
+					<div class="sharethis-inline-share-buttons" data-url="{{url('article')}}/{{$data->pid}}" data-title="{{$data->title}}" data-image="{{$data->image}}"
 						></div>
 
 <script>

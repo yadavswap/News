@@ -10,7 +10,8 @@
 {{-- <title>App Name - @yield('title')</title> --}}
 <meta property="og:title" content=" @yield('title')" />
 <meta property="og:image" content=" @yield('image')" />
-
+<meta property="og:image:width" content="490">
+<meta property="og:image:height" content="260">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 {{-- <title>{{config('name','NEWSKATTA')}}</title> --}}
 {{-- <title>{{config($data->title)}}</title> --}}
