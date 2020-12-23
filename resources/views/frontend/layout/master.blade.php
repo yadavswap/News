@@ -9,7 +9,7 @@
     <meta property="og:site_name" content="ShareThis" /> --}}
 {{-- <title>App Name - @yield('title')</title> --}}
 <meta property="og:title" content=" @yield('title')" />
-<meta property="og:image" content=" http://newskatta.in/posts/2012186335520121721032news%20%20katta.png" />
+<meta property="og:image" content=" http://newskatta.in/posts/@yield('image') "/>
 <meta property="og:image:width" content="490">
 <meta property="og:image:height" content="260">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

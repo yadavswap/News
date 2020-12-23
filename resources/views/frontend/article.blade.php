@@ -1,7 +1,7 @@
 @extends('frontend.layout.master')
 @section( 'content')
 @section('title', $data->title)
-{{-- @section('image', ('/posts')/$data->image) --}}
+@section('image', $data->image)
 
 
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fe2e4577c936200185ee863&product=inline-share-buttons" async="async"></script>
