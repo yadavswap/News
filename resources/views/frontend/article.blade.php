@@ -1,7 +1,9 @@
 @extends('frontend.layout.master')
 @section( 'content')
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fe2e4577c936200185ee863&product=inline-share-buttons" async="async"></script>
 
-
+<meta property="og:title" content="{{$data->title}}">
+<meta property="og:image" content="{{url('/posts')}}/{{$data->image}}">
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5fd3276a88122800187db5a5&product=inline-share-buttons' async='async'></script>
 
 <script id="dsq-count-scr" src="//http-newskatta-in.disqus.com/count.js" async></script>
@@ -61,8 +63,8 @@
 					</div>	
 					<div class="share-this">
 						<h4>Share this ....</h4>
-						<div class="sharethis-inline-share-buttons" data-title="{{$data->title}}" data-image="{{url('/posts')}}/{{$data->image}}"
-							></div>
+						{{-- <div class="sharethis-inline-share-buttons" data-title="{{$data->title}}" data-image="{{url('/posts')}}/{{$data->image}}"
+							></div> --}}
 						{{-- <div class="fb-share-button" data-href="{{url('article')}}/{{$data->title}}" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url('article')}}/{{$data->pid}}" ></a></div> --}}
 					{{-- <div class="fb-share-button" data-href="{{url('article')}}/{{$data->title}}" data-layout="button" data-size="small"><a href={{ "whatsapp://send?text=https://theainet.net/newblog/".$data->pid }} ></a></div> --}}
 
@@ -84,9 +86,9 @@
 							whatsapp</a>
 					</span> --}}
 						
-						<script type="IN/Share" data-url="{{url('article')}}/{{$data->slug}}" data-size="small"></script>
-						</div>
-						<div id="disqus_thread"></div>
+					{{-- <div class="sharethis-inline-share-buttons"></div> --}}
+					<div class="sharethis-inline-share-buttons" data-url="http://newskatta.in" data-title="{{$data->title}}"></div>
+
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
