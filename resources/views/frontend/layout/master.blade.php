@@ -2,14 +2,16 @@
 <!DOCTYPE html >
 
 <head>
-    <meta property="og:title" content="Join the best company in the world!" />
+    {{-- <meta property="og:title" content="Join the best company in the world!" />
     <meta property="og:url" content="http://www.sharethis.com" />
     <meta property="og:image" content="http://sharethis.com/images/logo.jpg" />
     <meta property="og:description" content="ShareThis is its people. It's imperative that we hire smart,innovative people who can work intelligently as we continue to disrupt the very category we created. Come join us!" />
-    <meta property="og:site_name" content="ShareThis" />
+    <meta property="og:site_name" content="ShareThis" /> --}}
 <title>App Name - @yield('title')</title>
+<meta property="og:title" content="Join the best company in the world!" />
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>{{config('name','NEWSKATTA')}}</title>
+{{-- <title>{{config('name','NEWSKATTA')}}</title> --}}
 {{-- <title>{{config($data->title)}}</title> --}}
 <script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 

@@ -106,7 +106,7 @@
 				@if($key == 0)
 
 				<a href="{{url('article')}}/{{$t->pid}}"><img src="{{url('/posts')}}/{{$t->image}}" width="100%" style="margin-bottom:15px;" /></a>
-				<a href="{{url('article')}}/{{$t->pid}}"><a href="{{url('article')}}/{{$t->pid}}"><h1>{{$t->title}}</h1> <a href="{{url('article')}}/{{$t->pid}}"><h2> Read more &raquo;</h2> </a>
+				<a href="{{url('article')}}/{{$t->pid}}"><a href="{{url('article')}}/{{$t->pid}}"><h4>{{$t->title}}</h4> <a href="{{url('article')}}/{{$t->pid}}"><h4> Read more &raquo;</h4> </a>
 				@endif
 				@endforeach
 
@@ -123,7 +123,7 @@
                     </div>
             	    <div class="col-md-8">
                     	<div class="row">
-							<h1><a href="{{url('article')}}/{{$t->pid}}">{{$t->title}}</a></h1>
+							<h4><a href="{{url('article')}}/{{$t->pid}}">{{$t->title}}</a></h4>
                 		</div>
                     </div>
 				</div>
@@ -137,7 +137,7 @@
 				@foreach($sport as $key => $s)
 				@if($key == 0)
 				<a href="{{url('article')}}/{{$s->pid}}"><img src="{{url('/posts')}}/{{$s->image}}" width="100%" style="margin-bottom:15px;" /></a>
-				<a href="{{url('article')}}/{{$s->pid}}"><a href="{{url('article')}}/{{$s->pid}}"><h1>{{$s->title}}</h1> <a href="{{url('article')}}/{{$s->pid}}"><h2> Read more &raquo;</h2> </a>
+				<a href="{{url('article')}}/{{$s->pid}}"><a href="{{url('article')}}/{{$s->pid}}"><h4>{{$s->title}}</h4> <a href="{{url('article')}}/{{$s->pid}}"><h4> Read more &raquo;</h4> </a>
 				@endif
 				@endforeach
 				</div>
@@ -152,7 +152,7 @@
                     </div>
             	    <div class="col-md-8">
                     	<div class="row" style="padding-left:0px;">
-							<h1><a href="{{url('article')}}/{{$s->pid}}">{{$s->title}}</a></h1>
+							<h4><a href="{{url('article')}}/{{$s->pid}}">{{$s->title}}</a></h4>
                 		</div>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
                     </div>
             	    <div class="col-md-8">
                     	<div class="row" style="padding-left:10px;">
-							<h1><a href="{{url('article')}}/{{$h->pid}}">{{$h->title}}</a></h1>
+							<h4><a href="{{url('article')}}/{{$h->pid}}">{{$h->title}}</a></h4>
                 		</div>
                     </div>
                 </div>
@@ -233,7 +233,7 @@
 				@foreach ( $categories as $key => $cat)
 				@if($key > 0 && $key > 5)
 					
-				<a href="{{url("category")}}/{{$cat->slug}}"><h1 style="border-bottom:3px solid #000080; padding-bottom:5px;"><span style="padding:6px 12px; background:#000080;">{{$cat->title}}</span></h1></a>
+				<a href="{{url("category")}}/{{$cat->slug}}"><h1 style="border-bottom:3px solid #000080; padding-bottom:5px;"><span style="padding:6px 12px; background:#000080;">{{$cat->title}}</span></h4></a>
 				@endif
 				@endforeach
 
@@ -251,7 +251,7 @@
                 </div>
             	<div class="col-md-8">
                    	<div class="row" style="padding-left:10px;">
-						<h1><a href="{{url('article')}}/{{$edu->pid}}">{{$edu->title}}</a></h1>
+						<h4><a href="{{url('article')}}/{{$edu->pid}}">{{$edu->title}}</a></h4>
                 	</div>
                 </div>
             </div>
@@ -283,7 +283,7 @@
                     </div>
             	    <div class="col-md-8">
                     	<div class="row" style="padding-left:0px;">
-							<h1><a href="{{url('article')}}/{{$p->pid}}">{{$p->title}}</a></h1>
+							<h4><a href="{{url('article')}}/{{$p->pid}}">{{$p->title}}</a></h4>
                 		</div>
 					</div>
 
@@ -326,7 +326,7 @@
                     </div>
             	    <div class="col-md-8">
                     	<div class="row" style="padding-left:0px;">
-							<h1><a href="{{url('article')}}/{{$s->pid}}">{{$s->title}}</a></h1>
+							<h4><a href="{{url('article')}}/{{$s->pid}}">{{$s->title}}</a></h4>
                 		</div>
                     </div>
                 </div>
