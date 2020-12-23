@@ -7,8 +7,8 @@
     <meta property="og:image" content="http://sharethis.com/images/logo.jpg" />
     <meta property="og:description" content="ShareThis is its people. It's imperative that we hire smart,innovative people who can work intelligently as we continue to disrupt the very category we created. Come join us!" />
     <meta property="og:site_name" content="ShareThis" /> --}}
-<title>App Name - @yield('title')</title>
-<meta property="og:title" content="Join the best company in the world!" />
+{{-- <title>App Name - @yield('title')</title> --}}
+<meta property="og:title" content=" @yield('title')" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 {{-- <title>{{config('name','NEWSKATTA')}}</title> --}}
