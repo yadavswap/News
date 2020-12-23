@@ -3,7 +3,7 @@
 @section( 'content')
 
 
-
+<script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 	
 <div class="wrapper">

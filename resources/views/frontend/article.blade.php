@@ -2,7 +2,7 @@
 @section( 'content')
 @section('title', $data->title)
 @section('image', $data->image)
-
+<script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fe2e4577c936200185ee863&product=inline-share-buttons" async="async"></script>
 
@@ -149,7 +149,10 @@
 						
 						<div class="col-md-4">
 							<div class="row">
-								<img href="{{url('article')}}/{{$l->pid}}" src="{{url('/posts')}}/{{$l->image}}" width="100%" style="margin-left:-15px;" />
+								{{--  <a ><img href="{{url('article')}}/{{$p->pid}}" src="{{url('/posts')}}/{{$p->image}}" width="100%" /></a>  --}}
+								<a href="{{url('article')}}/{{$l->pid}}"><img src="{{url('/posts')}}/{{$l->image}}" width="100%" style="margin-bottom:15px;" /></a>
+
+								{{--  <img href="{{url('article')}}/{{$l->pid}}" src="{{url('/posts')}}/{{$l->image}}" width="100%" style="margin-left:-15px;" />  --}}
 							</div>
 						</div>
 						<div class="col-md-8">

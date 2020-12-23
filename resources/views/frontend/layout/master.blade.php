@@ -8,6 +8,7 @@
     <meta property="og:description" content="ShareThis is its people. It's imperative that we hire smart,innovative people who can work intelligently as we continue to disrupt the very category we created. Come join us!" />
     <meta property="og:site_name" content="ShareThis" /> --}}
 {{-- <title>App Name - @yield('title')</title> --}}
+<script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <meta property="og:title" content=" @yield('title')" />
 <meta property="og:image" content=" http://newskatta.in/posts/@yield('image') "/>
 <meta property="og:image:width" content="490">
