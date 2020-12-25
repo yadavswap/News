@@ -105,7 +105,7 @@
             <div class="col-md-4">
                 <div class="row">
                     {{--  <a ><img href="{{url('article')}}/{{$p->pid}}" src="{{url('/posts')}}/{{$p->image}}" width="100%" /></a>  --}}
-                    <a href="{{url('article')}}/{{$l->pid}}"><img src="{{url('/posts')}}/{{$l->image}}" width="100%" style="margin-bottom:15px;" /></a>
+                    <a href="{{url('article')}}/{{$l->pid}}"><img src="{{url('/posts')}}/{{$l->image}}" width="50%" style="margin-bottom:15px;" /></a>
 
                     {{--  <img href="{{url('article')}}/{{$l->pid}}" src="{{url('/posts')}}/{{$l->image}}" width="100%" style="margin-left:-15px;" />  --}}
                 </div>
