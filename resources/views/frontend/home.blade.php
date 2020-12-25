@@ -1,41 +1,8 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/path/to/tailwind.css" rel="stylesheet">
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  @section('title', $data->title)
-  @section('image', $data->image)
-  <script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  
-  <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fe2e4577c936200185ee863&product=inline-share-buttons" async="async"></script>
-  
-  {{-- <meta property="og:title" content="{{$data->title}}">
-  <meta property="og:image" content="{{url('/posts')}}/{{$data->image}}"> --}}
-  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5fd3276a88122800187db5a5&product=inline-share-buttons' async='async'></script>
-  
-  <script id="dsq-count-scr" src="//http-newskatta-in.disqus.com/count.js" async></script>
-  <script>window.twttr = (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0],
-      t = window.twttr || {};
-    if (d.getElementById(id)) return t;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  
-    t._e = [];
-    t.ready = function(f) {
-      t._e.push(f);
-    };
-  
-    return t;
-  }(document, "script", "twitter-wjs"));</script>  
-  <!-- ... -->
-</head>
+
 @extends('frontend.layout.master')
 @section( 'content')
+@section('title', $data->title)
+{{-- @section('image', $data->image) --}}
 <body>
   <!-- ... -->
   <section class="text-gray-600 body-font">
@@ -95,6 +62,7 @@
       </div>
     </div>
   </section>
+  
   <div class="col-md-8-center">
     <div class="col-md-12" style="padding:15px;">
         <h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">Latest NEWS</span></h3>
@@ -127,4 +95,3 @@
 </div>
 </body>
 @endsection
-</html>

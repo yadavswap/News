@@ -2,21 +2,53 @@
 <!DOCTYPE html >
 
 <head>
+    <script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script id="dsq-count-scr" src="//http-newskatta-in.disqus.com/count.js" async></script>
+  
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fe2e4577c936200185ee863&product=inline-share-buttons" async="async"></script>
+    
+    {{-- <meta property="og:title" content="{{$data->title}}">
+    <meta property="og:image" content="{{url('/posts')}}/{{$data->image}}"> --}}
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5fd3276a88122800187db5a5&product=inline-share-buttons' async='async'></script>
+    
+    <script id="dsq-count-scr" src="//http-newskatta-in.disqus.com/count.js" async></script>
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+    
+      return t;
+    }(document, "script", "twitter-wjs"));</script>  
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{-- <link href="/path/to/tailwind.css" rel="stylesheet"> --}}
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     {{-- <meta property="og:title" content="Join the best company in the world!" />
     <meta property="og:url" content="http://www.sharethis.com" />
     <meta property="og:image" content="http://sharethis.com/images/logo.jpg" />
     <meta property="og:description" content="ShareThis is its people. It's imperative that we hire smart,innovative people who can work intelligently as we continue to disrupt the very category we created. Come join us!" />
     <meta property="og:site_name" content="ShareThis" /> --}}
 {{-- <title>App Name - @yield('title')</title> --}}
-<script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{{-- <script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
 <meta property="og:title" content=" @yield('title')" />
-<meta property="og:image" content=" http://newskatta.in/posts/@yield('image') "/>
+{{-- <meta property="og:image" content=" http://newskatta.in/posts/@yield('image') "/> --}}
+<meta property="og:image" content=" http://newskatta.in/settings/20121312255news%20%20katta.png "/> 
+
 <meta property="og:image:width" content="490">
 <meta property="og:image:height" content="260">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 {{-- <title>{{config('name','NEWSKATTA')}}</title> --}}
 {{-- <title>{{config($data->title)}}</title> --}}
-<script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{{-- <script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
 
 <link href="{{url('/css/bootstrap.min.css')}}" rel="stylesheet"  />
 <link href="{{url('/css/bootstrap-theme.min.css')}}" rel="stylesheet"  />
