@@ -53,7 +53,7 @@ class frontendController extends Controller
 
 
 
-    return view('frontend.new',['featured'=>$featured,'general'=>$general,'business'=>$business,'tech'=>$tech,'sport'=>$sport,'health'=>$health,'travel'=>$travel,'enter'=>$enter,'edu'=>$edu
+    return view('frontend.home',['featured'=>$featured,'general'=>$general,'business'=>$business,'tech'=>$tech,'sport'=>$sport,'health'=>$health,'travel'=>$travel,'enter'=>$enter,'edu'=>$edu
     ,'pol'=>$pol,'style'=>$style,'new'=>$new,'lastnews'=>$lastnews]);
 }
 
@@ -101,7 +101,7 @@ class frontendController extends Controller
         $releated = DB::table('posts')->where('category_id','LIKE','%'.$data->category_id.'%')->get();
         $latest = DB::table('posts')->where('status','publish')->orderby('pid','DESC')->get();
 
-        return view('frontend.article',['data'=>$data,'releated'=>$releated,'latest'=>$latest]);
+        return view('frontend.home',['data'=>$data,'releated'=>$releated,'latest'=>$latest]);
     }
     public function page($slug){
         $data = DB::table('pages')->where('slug',$slug)->first();

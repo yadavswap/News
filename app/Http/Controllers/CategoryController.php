@@ -18,7 +18,18 @@ class CategoryController extends Controller
     {
         //
         $data = DB::table('categories')->where('status' ,'on')->get();
-        return $data;
+        // @foreach($categories as $key=> $cat)
+        // @if($key < 6 )
+        // foreach ($data as $key => $value) {
+        //     @if($key < 6){
+        //                 return $key;
+
+        //     }
+        return $data->take(7);
+
+        //     # code...
+        // }
+        
         // return CategoryCollection::collection(Category::paginate(20));
 
     }
