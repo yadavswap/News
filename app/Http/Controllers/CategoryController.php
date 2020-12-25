@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use DB;
 
 use App\Model\Category;
 use Illuminate\Http\Request;
@@ -16,7 +17,9 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        return CategoryCollection::collection(Category::paginate(20));
+        $data = DB::table('categories')->where('status' ,'on')->get();
+        return $data;
+        // return CategoryCollection::collection(Category::paginate(20));
 
     }
 

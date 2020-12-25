@@ -24,4 +24,5 @@ class CategoryCollection extends Resource
 
         ];
     }
+    
 }
