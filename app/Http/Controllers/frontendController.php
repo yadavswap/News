@@ -53,7 +53,7 @@ class frontendController extends Controller
 
 
 
-    return view('frontend.home',['featured'=>$featured,'general'=>$general,'business'=>$business,'tech'=>$tech,'sport'=>$sport,'health'=>$health,'travel'=>$travel,'enter'=>$enter,'edu'=>$edu
+    return view('frontend.new',['featured'=>$featured,'general'=>$general,'business'=>$business,'tech'=>$tech,'sport'=>$sport,'health'=>$health,'travel'=>$travel,'enter'=>$enter,'edu'=>$edu
     ,'pol'=>$pol,'style'=>$style,'new'=>$new,'lastnews'=>$lastnews]);
 }
 

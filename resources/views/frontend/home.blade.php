@@ -9,7 +9,7 @@
     
     <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
         <div class="text-right view-count">
-            <h3>
+            <h3 >
                 <i class="fa fa-eye"></i>
                 {{ $data->views + 1 }}
                 @if($data->views != 0 )
@@ -19,6 +19,7 @@
                 @endif
             </h3>
         </div>
+        
         <h4>By {{$data->editor}}</h4><br/>
         <h4> {{$data->place}}</h4>
       <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"  src="{{url('/posts')}}/{{$data->image}}" href="{{url('article')}}/{{$data->slug}}">
@@ -65,7 +66,7 @@
   
   <div class="col-md-8-center">
     <div class="col-md-12" style="padding:15px;">
-        <h3 style="border-bottom:3px solid #2b99ca; padding-bottom:5px;"><span style="padding:6px 12px; background:#2b99ca;">Latest NEWS</span></h3>
+        <h3 style="border-bottom:3px solid #000080; padding-bottom:5px;"><span style="padding:6px 12px; background:#000080;">लेटेस्ट न्यूज</span></h3>
         @foreach($latest->take(10) as $key => $l)
             
         <div class="col-md-12" style="border-bottom:1px solid #ccc; padding-bottom:10px; margin-bottom:10px;">

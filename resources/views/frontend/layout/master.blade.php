@@ -2,6 +2,10 @@
 <!DOCTYPE html >
 
 <head>
+    <a class="weatherwidget-io" href="https://forecast7.com/en/21d1879d66/bhandara/" data-label_1="BHANDARA" data-label_2="WEATHER" data-theme="original" >BHANDARA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
     <script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script id="dsq-count-scr" src="//http-newskatta-in.disqus.com/count.js" async></script>
   
@@ -122,7 +126,7 @@
             		<span class="icon-bar"></span>
             		<span class="icon-bar"></span>
         		</button>
-        		<span class="navbar-brand"><font color="#555555">NEWS</font><font color="#2ca0c9">KATTA</font></span>
+        		<span class="navbar-brand"><font color="#555555"></font><font color="#2ca0c9">न्यूजकट्टा</font></span>
             </div>
             
     		<div class="collapse navbar-collapse" id="mynavbar">
