@@ -22,7 +22,7 @@
         <h4>By {{$data->editor}}</h4><br/>
         <h4> {{$data->place}}</h4>
       <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"  src="{{url('/posts')}}/{{$data->image}}" href="{{url('article')}}/{{$data->slug}}">
-      <div class="text-center lg:w-2/3 w-full">
+      <div class="text-justify lg:w-2/3 w-full">
 
         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{{$data->title}}</h1>
         
