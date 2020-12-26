@@ -40,8 +40,8 @@
 {{-- <title>App Name - @yield('title')</title> --}}
 {{-- <script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
 <meta property="og:title" content=" @yield('title')" />
-{{-- <meta property="og:image" content=" http://newskatta.in/posts/@yield('image') "/> --}}
-<meta property="og:image" content=" http://newskatta.in/settings/20121312255news%20%20katta.png "/> 
+<meta property="og:image" content=" http://newskatta.in/posts/@yield('image') "/>
+{{-- <meta property="og:image" content=" http://newskatta.in/settings/20121312255news%20%20katta.png "/>  --}}
 
 <meta property="og:image:width" content="490">
 <meta property="og:image:height" content="260">

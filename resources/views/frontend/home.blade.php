@@ -1,11 +1,11 @@
 
+@section('image', $data->image)
+
 @extends('frontend.layout.master')
 @section( 'content')
 @section('title', $data->title)
-{{-- @section('image', $data->image) --}}
-<body>
   <!-- ... -->
-  <section class="text-gray-600 body-font">
+  <div class="text-gray-600 body-font">
     
     <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
         <div class="text-right view-count">
@@ -61,7 +61,7 @@
         
       </div>
     </div>
-  </section>
+  </div>
   
   <div class="col-md-8-center">
     <div class="col-md-12" style="padding:15px;">
@@ -93,5 +93,4 @@
 
 
 </div>
-</body>
 @endsection
