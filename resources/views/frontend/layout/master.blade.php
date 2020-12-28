@@ -2,6 +2,15 @@
 <!DOCTYPE html >
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3X05YF3YQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X3X05YF3YQ');
+</script>
     <script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <a class="weatherwidget-io" href="https://forecast7.com/en/21d1879d66/bhandara/" data-label_1="BHANDARA" data-label_2="WEATHER" data-theme="original" >BHANDARA WEATHER</a>
     <br>
