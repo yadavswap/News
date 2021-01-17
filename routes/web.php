@@ -15,6 +15,8 @@ Route::get('contact', 'frontendController@contact');
 
 Route::get('newhome/{id}', 'frontendController@article')->name('index');
 Route::get('new', 'frontendController@new')->name('index');
+Route::get('/newhome', 'frontendController@newhome')->name('newhome');
+Route::get('/allnews', 'frontendController@allnews')->name('allnews');
 
 
 Route::get('/', 'frontendController@index')->name('index');
