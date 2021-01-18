@@ -302,7 +302,7 @@
               <div class="col-lg-9 stretch-card grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    @foreach($general->take(3) as $key => $g)
+                    @foreach($general->take(3) as $g)
                     <div class="row">
 
                       <div class="col-sm-4 grid-margin">
