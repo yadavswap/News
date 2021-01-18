@@ -153,7 +153,7 @@
         <!-- partial -->
         <div class="flash-news-banner">
           <div class="container">
-            @foreach($latest->take(1) as $key => $l)
+            @foreach($latest->take(1) as  $l)
 
             <div class="d-lg-flex align-items-center justify-content-between">
               <div class="d-flex align-items-center">
@@ -176,11 +176,11 @@
             <div class="row" data-aos="fade-up">
               
               <div class="col-xl-8 stretch-card grid-margin">
-                @foreach($latest->take(1) as $key => $f)
+                @foreach($latest->take(1) as  $l)
 
                 <div class="position-relative">
                   <img
-                    src="{{url('/posts')}}/{{$f->image}}"
+                    src="{{url('/posts')}}/{{$l->image}}"
                     alt="banner"
                     class="img-fluid"
                     width="1450px"
@@ -191,9 +191,9 @@
                       HEADLINES
                     </div>
                     <h1 class="mb-0" style="    margin-top: 50px;
-                    ">{{$f->title}}</h1>
+                    ">{{$l->title}}</h1>
                     <h1 class="mb-2"  >
-                {!! substr($f->description,0,300)!!}
+                {!! substr($l->description,0,300)!!}
                     </h1>
                     {{--  <div class="fs-12">
                       <span class="mr-2">Photo </span>10 Minutes ago
@@ -207,7 +207,7 @@
                 <div class="card bg-dark text-white">
                   <div class="card-body">
                     <h2>Latest news</h2>
-                    @foreach($latest->take(3) as $key => $l)
+                    @foreach($latest->take(3) as $l)
 
                     <div
                       class="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between"
@@ -355,7 +355,7 @@
                         <div class="card-title">
                           राजकीय कट्टा
                         </div>
-                        @foreach($pol->take(4) as $key => $p)
+                        @foreach($pol->take(4) as  $p)
 
                         <div class="row">
                           <div class="col-sm-6 grid-margin">
@@ -399,7 +399,7 @@
 
                           </div>
                         </div>
-                        @foreach($pol->take(3) as $key => $p)
+                        @foreach($pol->take(3) as  $p)
 
                         <div
                           class="d-flex justify-content-between align-items-center pt-3"
@@ -407,8 +407,8 @@
 
                           <div class="div-w-80 mr-3">
                             <div class="rotate-img">
-                              <a href="{{url('article')}}/{{$f->pid}}"><img
-                                src="{{url('/posts')}}/{{$f->image}}"
+                              <a href="{{url('article')}}/{{$p->pid}}"><img
+                                src="{{url('/posts')}}/{{$p->image}}"
                                 alt="thumb"
                                 class="img-fluid"
                                 width="120px"
@@ -417,7 +417,7 @@
                             </div>
                           </div>
                           <h3 class="font-weight-600 mb-0">
-                            {{$f->title}}
+                            {{$p->title}}
                           </h3>
                         </div>
                         @endforeach
@@ -462,7 +462,7 @@
                             >
                           </div> --}}
 
-                          @foreach($health->take(4) as $key => $f)
+                          @foreach($health->take(4) as $h)
 
                           <div class="col-xl-6 col-lg-4 col-sm-6">
 
@@ -473,9 +473,9 @@
                               <p class="fs-13 text-muted mb-0">
                                 <span class="mr-2"> </span>
                               </p>
-                              <a href="{{url('article')}}/{{$f->pid}}">
+                              <a href="{{url('article')}}/{{$h->pid}}">
                               <p class="mb-0">
-                                {{$f->title}}  </p>
+                                {{$h->title}}  </p>
                               </a>
                             </div>
                           </div>
@@ -488,7 +488,7 @@
                             <div class="card-title">
                               थोडक्यात!
                             </div>
-                            @foreach($featured->take(2) as $key => $f)
+                            @foreach($featured->take(2) as  $f)
 
                             <div class="border-bottom pb-3">
 
@@ -513,7 +513,7 @@
                             <div class="card-title">
                               Most Views
                             </div>
-                            @foreach($viewmost->take(4) as $key => $f)
+                            @foreach($viewmost->take(4) as  $v)
 
                             <div class="row">
                               <div class="col-sm-12">
@@ -521,8 +521,8 @@
                                   <div class="row">
                                     <div class="col-sm-5 pr-2">
                                       <div class="rotate-img">
-                                        <a href="{{url('article')}}/{{$g->pid}}"><img
-                                          src="{{url('/posts')}}/{{$g->image}}"
+                                        <a href="{{url('article')}}/{{$v->pid}}"><img
+                                          src="{{url('/posts')}}/{{$v->image}}"
                                           alt="thumb"
                                           class="img-fluid w-100"
                                           width="148px"
@@ -532,9 +532,9 @@
                                     </div>
                                     <div class="col-sm-7 pl-2">
                                       <p class="fs-16 font-weight-600 mb-0">
-                                        {!! substr($f->title,0,30)!!}                                    
+                                        {!! substr($v->title,0,30)!!}                                    
                                       <p class="mb-0 fs-13">
-                                        {!! substr($f->description,0,30)!!}                                    
+                                        {!! substr($v->description,0,30)!!}                                    
                                       </p>
                                     </div>
                                   </div>
