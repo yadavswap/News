@@ -193,12 +193,25 @@
         </div>
 		</div>
         
-			<div class="col-md-12 image-gallery" style="border:1px solid #ccc; padding:15px 15px 30px 15px; margin-top:30px; margin-bottom:30px;">
+	<div class="col-md-12 image-gallery" style="border:1px solid #ccc; padding:15px 15px 30px 15px; margin-top:30px; margin-bottom:30px;">
 			
 					
     	    	<h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">	महाराष्ट्र</span></h3>
-				@foreach($travel->take(4) as $key => $t)
-				<a href="{{url('article')}}/{{$t->pid}}"><img src="{{url('/posts')}}/{{$t->image}}" /></a>
+				@foreach($travel as $key => $h)
+				@if( $key > 0 && $key < 6 )
+            	<div class="row" style="border-bottom:1px solid #ccc; padding-bottom:10px; margin-bottom:10px;">
+	            	<div class="col-md-4">
+                    	<div class="row">
+							<img href="{{url('article')}}/{{$h->pid}}" src="{{url('/posts')}}/{{$h->image}}" width="100%" />
+        	        	</div>
+                    </div>
+            	    <div class="col-md-8">
+                    	<div class="row" style="padding-left:10px;">
+							<h4><a href="{{url('article')}}/{{$h->pid}}">{{$h->title}}</a></h4>
+                		</div>
+                    </div>
+                </div>
+				@endif
 				@endforeach
 
 		</div>
@@ -206,18 +219,21 @@
         <div class="col-md-12">
         <div class="col-md-12" style="border:1px solid #ccc; padding:15px 15px 30px 15px; margin-top:30px;">
         	<h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">आपला जिल्हा</span></h3>
-			@foreach($enter->take(3) as $key => $e)
-
-			<div class="row" style="margin-bottom:30px;">
-            <div class="col-md-4">
-				<a href="{{url('article')}}/{{$e->pid}}"><img href="{{url('article')}}/{{$e->pid}}" src="{{url('/posts')}}/{{$e->image}}" width="100%" /></a>
-            </div>
-         
-          
-          
-       
-      
+			@foreach($enter as $key => $h)
+			@if( $key > 0 && $key < 6 )
+			<div class="row" style="border-bottom:1px solid #ccc; padding-bottom:10px; margin-bottom:10px;">
+				<div class="col-md-4">
+					<div class="row">
+						<img href="{{url('article')}}/{{$h->pid}}" src="{{url('/posts')}}/{{$h->image}}" width="100%" />
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="row" style="padding-left:10px;">
+						<h4><a href="{{url('article')}}/{{$h->pid}}">{{$h->title}}</a></h4>
+					</div>
+				</div>
 			</div>
+			@endif
 			@endforeach
 
         </div>
