@@ -51,9 +51,9 @@
 		
     	<div class="col-md-8">
         <div class="col-md-12" style="border:1px solid #ccc; padding:15px 15px 30px 0px;">
-        	<div class="col-md-12">
+        	{{-- <div class="col-md-12">
         		<h3 style="border-bottom:3px solid #81d742; padding-bottom:5px;"><span style="padding:6px 12px; background:#81d742;">HEADLINES</span></h3>
-        	</div>
+        	</div> --}}
         	<div class="col-md-6">
 			@foreach($general as $key => $g)
 			@if($key == 0)

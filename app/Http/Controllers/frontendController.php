@@ -73,8 +73,9 @@ class frontendController extends Controller
         $style = DB::table('posts')->where('category_id' ,'LIKE','%46%')->orderby('pid','DESC')->get();
         $new = DB::table('posts')->where('category_id' ,'LIKE','%32%')->orderby('pid','DESC')->get();
         $lastnews = DB::table('posts')->where('status','publish')->orderby('pid','DESC')->first();
+        // $ads = DB::table('ads')->orderby('aid','DESC')->first();
 
-
+        // dd($ads);
 
 
 

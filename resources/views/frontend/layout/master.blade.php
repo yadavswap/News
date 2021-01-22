@@ -11,7 +11,7 @@
 
   gtag('config', 'G-X3X05YF3YQ');
 </script>
-    <script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    {{-- <script data-ad-client="ca-pub-4029595698860144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
     <a class="weatherwidget-io" href="https://forecast7.com/en/21d1879d66/bhandara/" data-label_1="BHANDARA" data-label_2="WEATHER" data-theme="original" >BHANDARA WEATHER</a>
     <br>
 <script>
@@ -73,7 +73,7 @@
 <div class="elfsight-app-f92c1bae-c8cc-4f8d-9100-e2213a314d82"></div> --}}
 <a class="fx-widget" data-widget="coronastatus" data-lang="en" data-base-url="https://www.fxempire.com" data-url="//www.fxempire.com" href="https://www.fxempire.com" rel="nofollow" > </a> <script async charset="utf-8" src="https://widgets.fxempire.com/widget.js" ></script>
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fd327e088122800187db5a6&product=inline-share-buttons" async="async"></script>
-
+<script data-ad-client="ca-pub-1019770819172202" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
@@ -142,12 +142,15 @@
     		<div class="collapse navbar-collapse" id="mynavbar">
     			<ul class="nav nav-justified">
                     <li><a href={{url('/')}} class="active"><span class="glyphicon glyphicon-home"></span></a></li>
+
                     @foreach($categories as $key=> $cat)
                     @if($key < 6 )
                         
                     <li><a href="{{url("category")}}/{{$cat->slug}}" class="text-uppercase" >{{$cat->title}}</a></li>
                     @endif
                     @endforeach
+                    <li><a href={{url('/allnews')}} class="active"><span class="glyphicon glyphicon"></span>सर्व</a></li>
+
                     
     				
         		</ul> 
