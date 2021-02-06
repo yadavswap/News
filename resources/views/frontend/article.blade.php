@@ -62,7 +62,7 @@
 						<h4> {{$data->place}}</h4>
 						</div>
 
-						<img href="{{url('article')}}/{{$data->slug}}" src="{{url('/posts')}}/{{$data->image}}"  width="100%" style="margin-bottom:15px;" />
+						<img href="{{url('article')}}/{{$data->slug}}" src="{{url('/posts')}}/{{$data->image}}"  width="200%" style="margin-bottom:15px;" />
 						{!! $data->description!!}
 					</div>	
 					<div class="share-this">
