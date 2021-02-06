@@ -45,7 +45,9 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {{-- <link href="/path/to/tailwind.css" rel="stylesheet"> --}}
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  {{-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> --}}
+  <link href="{{url('/taiwind.css')}}" rel="stylesheet"  />
+
     {{-- <meta property="og:title" content="Join the best company in the world!" />
     <meta property="og:url" content="http://www.sharethis.com" />
     <meta property="og:image" content="http://sharethis.com/images/logo.jpg" />
